@@ -2,38 +2,50 @@
 	<div id='content' class='container-fluid' ng-app='MyTutorialApp' ng-controller='MainController'>
 		<div class='row'>
 	        <div class='col-xs-2'>
-		        <select ng-model='selectedPokemon1' ng-options='obj.name for obj in pokemon | orderBy : alphabetical' id="select1"></select><br>
+		        <select ng-model='selectedPokemon1' ng-options='obj.name for obj in pokemon | orderBy : alphabetical' id='select1' class='select'><option value='' selected>Pokemon 1</option></select><br>
 		        <span ng-show='selectedPokemon1.id != null'>#</span><span id='id1'>{{selectedPokemon1.id}}</span> {{selectedPokemon1.name}}<br>
 		        {{selectedPokemon1.type[0]}}<span ng-show='selectedPokemon1.type[1] != null' id='get-scope'>/{{selectedPokemon1.type[1]}}</span><img src='{{selectedPokemon1.image}}' class='pokemonImg'>
 		    </div>
 		    <div class='col-xs-2'>
-		        <select ng-model='selectedPokemon2' ng-options='obj.name for obj in pokemon | orderBy : alphabetical'></select><br>
+		        <select ng-model='selectedPokemon2' ng-options='obj.name for obj in pokemon | orderBy : alphabetical' class='select'><option value='' selected>Pokemon 2</option></select><br>
 		        <span ng-show='selectedPokemon2.id != null'>#</span><span id='id2'>{{selectedPokemon2.id}}</span> {{selectedPokemon2.name}}<br>
 		        {{selectedPokemon2.type[0]}}<span ng-show='selectedPokemon2.type[1] != null'>/{{selectedPokemon2.type[1]}}</span><img src='{{selectedPokemon2.image}}' class='pokemonImg'>
 		    </div>
 		    <div class='col-xs-2'>
-		        <select ng-model='selectedPokemon3' ng-options='obj.name for obj in pokemon | orderBy : alphabetical'></select><br>
+		        <select ng-model='selectedPokemon3' ng-options='obj.name for obj in pokemon | orderBy : alphabetical' class='select'><option value='' selected>Pokemon 3</option></select><br>
 		        <span ng-show='selectedPokemon3.id != null'>#</span><span id='id3'>{{selectedPokemon3.id}}</span> {{selectedPokemon3.name}}<br>
 		        {{selectedPokemon3.type[0]}}<span ng-show='selectedPokemon3.type[1] != null'>/{{selectedPokemon3.type[1]}}</span><img src='{{selectedPokemon3.image}}' class='pokemonImg'>
 		    </div>
 		    <div class='col-xs-2'>
-		        <select ng-model='selectedPokemon4' ng-options='obj.name for obj in pokemon | orderBy : alphabetical'></select><br>
+		        <select ng-model='selectedPokemon4' ng-options='obj.name for obj in pokemon | orderBy : alphabetical' class='select'><option value='' selected>Pokemon 4</option></select><br>
 		        <span ng-show='selectedPokemon4.id != null'>#</span><span id='id4'>{{selectedPokemon4.id}}</span> {{selectedPokemon4.name}}<br>
 		        {{selectedPokemon4.type[0]}}<span ng-show='selectedPokemon4.type[1] != null'>/{{selectedPokemon4.type[1]}}</span><img src='{{selectedPokemon4.image}}' class='pokemonImg'>
 		    </div>
 		    <div class='col-xs-2'>
-		        <select ng-model='selectedPokemon5' ng-options='obj.name for obj in pokemon | orderBy : alphabetical'></select><br>
+		        <select ng-model='selectedPokemon5' ng-options='obj.name for obj in pokemon | orderBy : alphabetical' class='select'><option value='' selected>Pokemon 5</option></select><br>
 		        <span ng-show='selectedPokemon5.id != null'>#</span><span id='id5'>{{selectedPokemon5.id}}</span> {{selectedPokemon5.name}}<br>
 		        {{selectedPokemon5.type[0]}}<span ng-show='selectedPokemon5.type[1] != null'>/{{selectedPokemon5.type[1]}}</span><img src='{{selectedPokemon5.image}}' class='pokemonImg'>
 		    </div>
 		    <div class='col-xs-2'>
-		        <select ng-model='selectedPokemon6' ng-options='obj.name for obj in pokemon | orderBy : alphabetical'></select><br>
+		        <select ng-model='selectedPokemon6' ng-options='obj.name for obj in pokemon | orderBy : alphabetical' class='select'><option value='' selected>Pokemon 6</option></select><br>
 		        <span ng-show='selectedPokemon6.id != null'>#</span><span id='id6'>{{selectedPokemon6.id}}</span> {{selectedPokemon6.name}}<br>
 		        {{selectedPokemon6.type[0]}}<span ng-show='selectedPokemon6.type[1] != null'>/{{selectedPokemon6.type[1]}}</span><img src='{{selectedPokemon6.image}}' class='pokemonImg'>
 		    </div>
 		</div>
 		<button onClick="update();">Update</button>
 		<br><br><br>
+
+		<script type="text/javascript">
+		
+
+		$( document ).ready(function() {
+		    $(".select").change(function(){
+		    	setTimeout(function(){
+				    update();
+				}, 100);			    
+			});
+		});
+		</script>
 		<div class='container-fluid type-chart'>
 			<div class='row'>
 	        	<div class='col-xs-2 noBorder'>&nbsp;</div>

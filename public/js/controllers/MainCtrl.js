@@ -1,6 +1,7 @@
 angular.module('MainCtrl', []).controller('MainController', function($scope) {
 
-	//POKEMON SCOPE
+
+	//POKEMON
 	$scope.pokemon = [
         {
             id: 1,

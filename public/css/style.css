@@ -1,4 +1,5 @@
 .pokemonImg{width:100%;}
+.col-xs-1 .pokemonImg{width:130%;}
 
 .type-chart{
 	font-weight: bolder;
