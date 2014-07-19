@@ -1,0 +1,46 @@
+.pokemonImg{width:100%;}
+
+.type-chart{
+	font-weight: bolder;
+}
+
+
+.type-chart .row .col-xs-1, .type-chart .row .col-xs-2{
+	border: 1px solid #000000;
+}
+
+ .type-chart .row .noBorder{
+ 	border:none;
+ }
+/*
+#normalWeak, #fightingWeak, #flyingWeak, #poisonWeak, #groundWeak, #rockWeak, #bugWeak, #ghostWeak, #steelWeak, #fireWeak, #waterWeak, #grassWeak, #electricWeak, #psychicWeak, #iceWeak, #dragonWeak, #darkWeak,#fairyWeak {
+	background-color: #FF0000;
+}
+
+#normalResist, #fightingResist, #flyingResist, #poisonResist, #groundResist, #rockResist, #bugResist, #ghostResist, #steelResist, #fireResist, #waterResist, #grassResist, #electricResist, #psychicResist, #iceResist, #dragonResist, #darkResist,#fairyResist {
+	background-color: #00FF00;
+}*/
+
+#normalTotal, #fightingTotal, #flyingTotal, #poisonTotal, #groundTotal, #rockTotal, #bugTotal, #ghostTotal, #steelTotal, #fireTotal, #waterTotal, #grassTotal, #electricTotal, #psychicTotal, #iceTotal, #dragonTotal, #darkTotal,#fairyTotal {
+	background-color: #FFFFFF;
+}
+
+#normal {background-color: #A8A878;}
+#fighting {background-color: #C12D25;}
+#flying {background-color: #A890F0;}
+#poison {background-color: #A040A0;}
+#ground {background-color: #E0C068;}
+#rock {background-color: #B8A038;}
+#bug {background-color: #A8B820;}
+#ghost {background-color: #705898;}
+#steel {background-color: #B8B8D0;}
+#fire {background-color: #F08030;}
+#water {background-color: #6890F0;}
+#grass {background-color: #78C850;}
+#electric {background-color: #F8D030;}
+#psychic {background-color: #F85888;}
+#ice {background-color: #98D8D8;}
+#dragon {background-color: #7038F8;}
+#dark {background-color: #705848;}
+#fairy {background-color: #FF65D5;}
+
