@@ -1,6 +1,6 @@
 
 {
-  "name": "starter-node-angular",
+  "name": "Pokemon-Team-Analyzer",
   "main": "server.js",
   "dependencies": {
     "express" : "~4.5.1",

@@ -2,7 +2,7 @@
 	<div id='content' class='container-fluid' ng-app='MainApp' ng-controller='MainController'>
 		<div class='row' id="selections">
 	        <div class='col-xs-2'>
-		        <select ng-model='selectedPokemon1' ng-options='obj.name for obj in pokemon | orderBy : alphabetical' id='select1' class='select'></select><br>
+		        <input type="text" class="select" ng-model="selectedPokemon1" id="select1" ng-options="obj.name for obj in pokemon" placeholder="Pokemon 1" bs-typeahead>
 		        <span ng-show='selectedPokemon1.id != null'>#</span><span id='id1'>{{selectedPokemon1.id}}</span> {{selectedPokemon1.name}}<br>
 		        <img src='{{selectedPokemon1.image}}' class='MainPokemonImg' onError="this.src='../images/pokeball.png'">
 		        <span ng-show='selectedPokemon1.types[0] != null' id='pokemon1type1' class='pokemonType'>{{selectedPokemon1.types[0]}}</span>
@@ -44,6 +44,11 @@
 		        <span ng-show='selectedPokemon6.types[1] != null'>/ <span id='pokemon6type2' class='pokemonType'>{{selectedPokemon6.types[1]}}</span></span>
 		    </div>
 		</div>
+
+
+
+		
+
 		<br><br><br>
 		<div class='container-fluid type-chart'>
 			<div class='row' id="topRow">
@@ -678,11 +683,9 @@
 <script type="text/javascript">
 $( document ).ready(function() {
     //Update Type Chart on Pokemon Selection
-    $(".select").change(function(){
-        setTimeout(function(){
-            update();
-        }, 100);                
-    });
+   setInterval(function(){update();}, 100);
+
+
 
     //Fix sizing on top row
     $(window).on('resize', function(){
