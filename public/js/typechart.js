@@ -1,9 +1,3 @@
-function fix(){
-    var divWidth = $('#topRow .pokemonImg').width();
-    $('#topRow .col-xs-1').css('height', divWidth);
-    $('#topRow .col-xs-2').css('height', divWidth);
-}
-
 function update(){
     update1();
     update2();
@@ -16,6 +10,12 @@ function update(){
     var scope = angular.element($('#pokemon1type1')).scope();
     scope.$apply();
     getInfo();
+}
+
+function fix(){
+    var divWidth = $('#topRow .pokemonImg').width();
+    $('#topRow .col-xs-1').css('height', divWidth);
+    $('#topRow .col-xs-2').css('height', divWidth);
 }
 
 function update1(){
@@ -1978,39 +1978,48 @@ function cleanUp(){
 }
 
 function getInfo(){
-    var box = $('#normalTotal');
     var type1 = $('#pokemon1type1');
     var type2 = $('#pokemon1type2');
-    addColors(box,type1,type2);
+    addTypes(type1,type2);
     type1 = $('#pokemon2type1');
     type2 = $('#pokemon2type2');
-    addColors(box,type1,type2);
+    addTypes(type1,type2);
     type1 = $('#pokemon3type1');
     type2 = $('#pokemon3type2');
-    addColors(box,type1,type2);
+    addTypes(type1,type2);
     type1 = $('#pokemon4type1');
     type2 = $('#pokemon4type2');
-    addColors(box,type1,type2);
+    addTypes(type1,type2);
     type1 = $('#pokemon5type1');
     type2 = $('#pokemon5type2');
-    addColors(box,type1,type2);
+    addTypes(type1,type2);
     type1 = $('#pokemon6type1');
     type2 = $('#pokemon6type2');
-    addColors(box,type1,type2);    
+    addTypes(type1,type2);    
+
+    var box = $('#normalTotal');addColors(box);
+    var box = $('#fightingTotal');addColors(box);
+    var box = $('#flyingTotal');addColors(box);
+    var box = $('#poisonTotal');addColors(box);
+    var box = $('#groundTotal');addColors(box);
+    var box = $('#rockTotal');addColors(box);
+    var box = $('#bugTotal');addColors(box);
+    var box = $('#ghostTotal');addColors(box);
+    var box = $('#steelTotal');addColors(box);
+    var box = $('#fireTotal');addColors(box);
+    var box = $('#waterTotal');addColors(box);
+    var box = $('#grassTotal');addColors(box);
+    var box = $('#electricTotal');addColors(box);
+    var box = $('#psychicTotal');addColors(box);
+    var box = $('#iceTotal');addColors(box);
+    var box = $('#dragonTotal');addColors(box);
+    var box = $('#darkTotal');addColors(box);
+    var box = $('#fairyTotal');addColors(box);
+
 }
 
-function addColors(box,type1,type2){
-    
-    var boxTotal = box.html();
-    if(boxTotal > 0){
-        box.css('background-color', '#00FF00');
-    } else if(boxTotal < 0){
-        box.css('background-color', '#FF0000');
-    } else {
-        box.css('background-color', '#FFFFFF');
-    }
-
-    m = type1.html();
+function addTypes(type1,type2){
+    var m = type1.html();
     if(m == 'Normal'){type1.css('background-color', '#A8A878');}
     else if(m == 'Fighting'){type1.css('background-color', '#C12D25');}
     else if(m == 'Flying'){type1.css('background-color', '#A890F0');}
@@ -2030,7 +2039,7 @@ function addColors(box,type1,type2){
     else if(m == 'Dark'){type1.css('background-color', '#705848');}
     else if(m == 'Fairy'){type1.css('background-color', '#FF65D5');}
 
-    r = type2.html();
+    var r = type2.html();
     if(r == 'Normal'){type2.css('background-color', '#A8A878');}
     else if(r == 'Fighting'){type2.css('background-color', '#C12D25');}
     else if(r == 'Flying'){type2.css('background-color', '#A890F0');}
@@ -2048,7 +2057,17 @@ function addColors(box,type1,type2){
     else if(r == 'Ice'){type2.css('background-color', '#98D8D8');}
     else if(r == 'Dragon'){type2.css('background-color', '#7038F8');}
     else if(r == 'Dark'){type2.css('background-color', '#705848');}
-    else if(r == 'Fairy'){type2.css('background-color', '#FF65D5');}
+    else if(r == 'Fairy'){type2.css('background-color', '#FF65D5');}   
+}
 
-
+function addColors(box,type1,type2){
+    
+    var boxTotal = box.html();
+    if(boxTotal > 0){
+        box.css('background-color', '#00FF00');
+    } else if(boxTotal < 0){
+        box.css('background-color', '#FF0000');
+    } else {
+        box.css('background-color', '#FFFFFF');
+    }    
 }

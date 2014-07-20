@@ -1,5 +1,5 @@
 <div class='jumbotron text-center'>
-	<div id='content' class='container-fluid' style='text-align:center;' ng-app='MyTutorialApp' ng-controller='MainController'>
+	<div id='content' class='container-fluid' ng-app='MainApp' ng-controller='MainController'>
 		<div class='row' id="selections">
 	        <div class='col-xs-2'>
 		        <select ng-model='selectedPokemon1' ng-options='obj.name for obj in pokemon | orderBy : alphabetical' id='select1' class='select'></select><br>
@@ -49,22 +49,22 @@
 			<div class='row' id="topRow">
 	        	<div class='col-xs-2 noBorder'>&nbsp;</div>
 	        	<div class='col-xs-1 noBorder'>
-	        		<img src='{{selectedPokemon1.image}}' class='pokemonImg' onError="this.hide();">
+	        		<img src='{{selectedPokemon1.image}}' class='pokemonImg' onError="this.src='../images/pokeball.png'">
 	        	</div>
 	        	<div class='col-xs-1 noBorder'>
-	        		<img src='{{selectedPokemon2.image}}' class='pokemonImg' onError="this.hide();">
+	        		<img src='{{selectedPokemon2.image}}' class='pokemonImg' onError="this.src='../images/pokeball.png'">
 	        	</div>
 	        	<div class='col-xs-1 noBorder'>
-	        		<img src='{{selectedPokemon3.image}}' class='pokemonImg' onError="this.hide();">
+	        		<img src='{{selectedPokemon3.image}}' class='pokemonImg' onError="this.src='../images/pokeball.png'">
 	        	</div>
 	        	<div class='col-xs-1 noBorder'>
-	        		<img src='{{selectedPokemon4.image}}' class='pokemonImg' onError="this.hide();">
+	        		<img src='{{selectedPokemon4.image}}' class='pokemonImg' onError="this.src='../images/pokeball.png'">
 	        	</div>
 	        	<div class='col-xs-1 noBorder'>
-	        		<img src='{{selectedPokemon5.image}}' class='pokemonImg' onError="this.hide();">
+	        		<img src='{{selectedPokemon5.image}}' class='pokemonImg' onError="this.src='../images/pokeball.png'">
 	        	</div>
 	        	<div class='col-xs-1 noBorder'>
-	        		<img src='{{selectedPokemon6.image}}' class='pokemonImg' onError="this.hide();">
+	        		<img src='{{selectedPokemon6.image}}' class='pokemonImg' onError="this.src='../images/pokeball.png'">
 	        	</div>
 	        	<div class='col-xs-1 noBorder'>
 	        		<div class='col-label'>Weak</div>
