@@ -13,13 +13,13 @@ function update(){
     update6();
     updateTotals();
     cleanUp();
-    var scope = angular.element($('#get-scope')).scope();
+    var scope = angular.element($('#pokemon1type1')).scope();
     scope.$apply();
-    checkTotals();
+    getInfo();
 }
 
 function update1(){
-	var scope = angular.element($('#get-scope')).scope();
+	var scope = angular.element($('#pokemon1type1')).scope();
     var id1 = $( '#id1' ).html();
     if(!id1){
         return;
@@ -322,7 +322,7 @@ function update1(){
 }
 
 function update2(){
-    var scope = angular.element($('#get-scope')).scope();
+    var scope = angular.element($('#pokemon1type1')).scope();
     var id2 = $( '#id2' ).html();
     if(!id2){
         return;
@@ -625,7 +625,7 @@ function update2(){
 }
 
 function update3(){
-    var scope = angular.element($('#get-scope')).scope();
+    var scope = angular.element($('#pokemon1type1')).scope();
     var id3 = $( '#id3' ).html();
     if(!id3){
         return;
@@ -928,7 +928,7 @@ function update3(){
 }
 
 function update4(){
-    var scope = angular.element($('#get-scope')).scope();
+    var scope = angular.element($('#pokemon1type1')).scope();
     var id4 = $( '#id4' ).html();
     if(!id4){
         return;
@@ -1231,7 +1231,7 @@ function update4(){
 }
 
 function update5(){
-    var scope = angular.element($('#get-scope')).scope();
+    var scope = angular.element($('#pokemon1type1')).scope();
     var id5 = $( '#id5' ).html();
     if(!id5){
         return;
@@ -1534,7 +1534,7 @@ function update5(){
 }
 
 function update6(){
-    var scope = angular.element($('#get-scope')).scope();
+    var scope = angular.element($('#pokemon1type1')).scope();
     var id6 = $( '#id6' ).html();
     if(!id6){
         return;
@@ -1837,7 +1837,7 @@ function update6(){
 }
 
 function updateTotals(){
-    var scope = angular.element($('#get-scope')).scope();
+    var scope = angular.element($('#pokemon1type1')).scope();
 
     // Reset Columns
     for(var n = 0; n <= 17; n++){
@@ -1851,7 +1851,7 @@ function updateTotals(){
 }
 
 function totalsLoop(){
-    var scope = angular.element($('#get-scope')).scope();
+    var scope = angular.element($('#pokemon1type1')).scope();
     
     //Update Weak/Resist Columns
     for(var f = 0; f <= 17; f++){
@@ -1912,7 +1912,7 @@ function totalsLoop(){
 }
 
 function cleanUp(){
-    var scope = angular.element($('#get-scope')).scope();
+    var scope = angular.element($('#pokemon1type1')).scope();
     
     //Change decimals to fractions
     for(var f = 0; f <= 17; f++){
@@ -1977,46 +1977,29 @@ function cleanUp(){
     }
 }
 
-function checkTotals(){
+function getInfo(){
     var box = $('#normalTotal');
-    addColors(box);
-    box = $('#fightingTotal');
-    addColors(box);
-    box = $('#flyingTotal');
-    addColors(box);
-    box = $('#poisonTotal');
-    addColors(box);
-    box = $('#groundTotal');
-    addColors(box);
-    box = $('#rockTotal');
-    addColors(box);
-    box = $('#bugTotal');
-    addColors(box);
-    box = $('#ghostTotal');
-    addColors(box);
-    box = $('#steelTotal');
-    addColors(box);
-    box = $('#fireTotal');
-    addColors(box);
-    box = $('#waterTotal');
-    addColors(box);
-    box = $('#grassTotal');
-    addColors(box);
-    box = $('#electricTotal');
-    addColors(box);
-    box = $('#psychicTotal');
-    addColors(box);
-    box = $('#iceTotal');
-    addColors(box);
-    box = $('#dragonTotal');
-    addColors(box);
-    box = $('#darkTotal');
-    addColors(box);
-    box = $('#fairyTotal');
-    addColors(box);
+    var type1 = $('#pokemon1type1');
+    var type2 = $('#pokemon1type2');
+    addColors(box,type1,type2);
+    type1 = $('#pokemon2type1');
+    type2 = $('#pokemon2type2');
+    addColors(box,type1,type2);
+    type1 = $('#pokemon3type1');
+    type2 = $('#pokemon3type2');
+    addColors(box,type1,type2);
+    type1 = $('#pokemon4type1');
+    type2 = $('#pokemon4type2');
+    addColors(box,type1,type2);
+    type1 = $('#pokemon5type1');
+    type2 = $('#pokemon5type2');
+    addColors(box,type1,type2);
+    type1 = $('#pokemon6type1');
+    type2 = $('#pokemon6type2');
+    addColors(box,type1,type2);    
 }
 
-function addColors(box){
+function addColors(box,type1,type2){
     
     var boxTotal = box.html();
     if(boxTotal > 0){
@@ -2026,4 +2009,46 @@ function addColors(box){
     } else {
         box.css('background-color', '#FFFFFF');
     }
+
+    m = type1.html();
+    if(m == 'Normal'){type1.css('background-color', '#A8A878');}
+    else if(m == 'Fighting'){type1.css('background-color', '#C12D25');}
+    else if(m == 'Flying'){type1.css('background-color', '#A890F0');}
+    else if(m == 'Poison'){type1.css('background-color', '#A040A0');}
+    else if(m == 'Ground'){type1.css('background-color', '#E0C068');}
+    else if(m == 'Rock'){type1.css('background-color', '#B8A038');}
+    else if(m == 'Bug'){type1.css('background-color', '#A8B820');}
+    else if(m == 'Ghost'){type1.css('background-color', '#705898');}
+    else if(m == 'Steel'){type1.css('background-color', '#B8B8D0');}
+    else if(m == 'Fire'){type1.css('background-color', '#F08030');}
+    else if(m == 'Water'){type1.css('background-color', '#6890F0');}
+    else if(m == 'Grass'){type1.css('background-color', '#78C850');}
+    else if(m == 'Electric'){type1.css('background-color', '#F8D030');}
+    else if(m == 'Psychic'){type1.css('background-color', '#F85888');}
+    else if(m == 'Ice'){type1.css('background-color', '#98D8D8');}
+    else if(m == 'Dragon'){type1.css('background-color', '#7038F8');}
+    else if(m == 'Dark'){type1.css('background-color', '#705848');}
+    else if(m == 'Fairy'){type1.css('background-color', '#FF65D5');}
+
+    r = type2.html();
+    if(r == 'Normal'){type2.css('background-color', '#A8A878');}
+    else if(r == 'Fighting'){type2.css('background-color', '#C12D25');}
+    else if(r == 'Flying'){type2.css('background-color', '#A890F0');}
+    else if(r == 'Poison'){type2.css('background-color', '#A040A0');}
+    else if(r == 'Ground'){type2.css('background-color', '#E0C068');}
+    else if(r == 'Rock'){type2.css('background-color', '#B8A038');}
+    else if(r == 'Bug'){type2.css('background-color', '#A8B820');}
+    else if(r == 'Ghost'){type2.css('background-color', '#705898');}
+    else if(r == 'Steel'){type2.css('background-color', '#B8B8D0');}
+    else if(r == 'Fire'){type2.css('background-color', '#F08030');}
+    else if(r == 'Water'){type2.css('background-color', '#6890F0');}
+    else if(r == 'Grass'){type2.css('background-color', '#78C850');}
+    else if(r == 'Electric'){type2.css('background-color', '#F8D030');}
+    else if(r == 'Psychic'){type2.css('background-color', '#F85888');}
+    else if(r == 'Ice'){type2.css('background-color', '#98D8D8');}
+    else if(r == 'Dragon'){type2.css('background-color', '#7038F8');}
+    else if(r == 'Dark'){type2.css('background-color', '#705848');}
+    else if(r == 'Fairy'){type2.css('background-color', '#FF65D5');}
+
+
 }
