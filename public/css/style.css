@@ -1,5 +1,13 @@
 .pokemonImg{width:100%;}
-.col-xs-1 .pokemonImg{width:130%;}
+
+.col-xs-1, .col-xs-2{padding:0;}
+.col-xs-1 .pokemonImg{width:90%;}
+
+.col-label{
+	position:absolute;bottom:0;width:100%;
+}
+
+.select{width:100%;}
 
 .type-chart{
 	font-weight: bolder;
@@ -45,3 +53,20 @@
 #dark {background-color: #705848;}
 #fairy {background-color: #FF65D5;}
 
+@media only screen and (min-width: 992px){
+    body{
+    	font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+    body{
+    	font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 599px) {
+    body{
+    	font-size: 6px;
+    }
+}

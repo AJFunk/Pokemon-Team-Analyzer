@@ -1,3 +1,9 @@
+function fix(){
+    var divWidth = $('#topRow .pokemonImg').width();
+    $('#topRow .col-xs-1').css('height', divWidth);
+    $('#topRow .col-xs-2').css('height', divWidth);
+}
+
 function update(){
     update1();
     update2();
