@@ -1,5 +1,6 @@
 .main-content{padding:0;margin:0;width:100%;}
 .MainPokemonImg{width:100%;padding:10px 0;}
+#selections {max-width:550px;margin:0 auto;}
 .pokemonType{padding:1px 2px;color:#ffffff;font-weight: bolder;}
 .col-xs-1, .col-xs-2{padding:0;}
 .col-xs-1 .pokemonImg{width:90%;}
@@ -12,6 +13,10 @@
 
 .type-chart{
 	font-weight: bolder;
+	color: #ffffff;
+	text-shadow: 1px 1px #000000;
+	max-width: 550px;
+	padding: 0;
 }
 
 
@@ -35,6 +40,7 @@
 	background-color: #FFFFFF;
 }
 
+#topRow {background-color: #000000;}
 #normal {background-color: #A8A878;}
 #fighting {background-color: #C12D25;}
 #flying {background-color: #A890F0;}
@@ -68,6 +74,6 @@
 
 @media only screen and (min-width: 1px) and (max-width: 599px) {
     body{
-    	font-size: 6px;
+    	font-size: 10px;
     }
 }

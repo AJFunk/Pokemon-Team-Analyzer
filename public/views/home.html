@@ -1,6 +1,6 @@
 <div class='jumbotron text-center'>
-	<div id='content' class='container-fluid' ng-app='MyTutorialApp' ng-controller='MainController'>
-		<div class='row'>
+	<div id='content' class='container-fluid' style='text-align:center;' ng-app='MyTutorialApp' ng-controller='MainController'>
+		<div class='row' id="selections">
 	        <div class='col-xs-2'>
 		        <select ng-model='selectedPokemon1' ng-options='obj.name for obj in pokemon | orderBy : alphabetical' id='select1' class='select'></select><br>
 		        <span ng-show='selectedPokemon1.id != null'>#</span><span id='id1'>{{selectedPokemon1.id}}</span> {{selectedPokemon1.name}}<br>
