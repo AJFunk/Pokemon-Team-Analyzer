@@ -1,0 +1,22 @@
+<div class="container-fluid" style="text-align:center;">
+
+	<h1>Pokedex</h1>
+	<div class="row pokedex">
+
+
+	</div>
+
+		
+
+</div>
+
+<script type="text/javascript">
+var scope = angular.element($('#pokemon1type1')).scope();
+
+for(var p = 0; p < 151; p++){
+	var entries = "<div class='col-xs-2'><img src='" + scope.pokemon[p].image + "'style='width:100%;'><span class='id'>#" + scope.pokemon[p].id + "</span>" + scope.pokemon[p].name + "<br>" + scope.pokemon[p].types[0] + "/" + scope.pokemon[p].types[1] + "</div>";
+	$('.pokedex').append(entries);
+
+}
+
+</script>

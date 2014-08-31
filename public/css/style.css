@@ -9,7 +9,7 @@
 	position:absolute;bottom:30%;width:100%;
 }
 
-.select{width:100%;}
+.select{width:90%;}
 
 .type-chart{
 	font-weight: bolder;
@@ -63,19 +63,35 @@
 #fairy {background-color: #FF65D5;}
 
 @media only screen and (min-width: 992px){
-    body{
+    .type-chart, .select{
     	font-size: 12px;
     }
+    .pokemonType {font-size: 10px;}
 }
 
 @media only screen and (min-width: 600px) and (max-width: 991px) {
-    body{
+    .type-chart, .select, .pokemonType{
     	font-size: 10px;
     }
 }
 
 @media only screen and (min-width: 1px) and (max-width: 599px) {
-    body{
+    .type-chart, .select{
     	font-size: 10px;
     }
+    .pokemonType {
+    	font-size: 9px;
+    }
+}
+
+.footer {
+    background-color: #2b2b2b;
+}
+
+.pokedex {
+    padding:0 10px;
+}
+
+.pokedex .col-sm-4 {
+    text-align: center;
 }

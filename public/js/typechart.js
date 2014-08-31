@@ -1858,7 +1858,7 @@ function totalsLoop(){
         var value = scope.chart[0].column1[f];
         if(value > 1){
             scope.chart[0].column7[f]++;
-        } else if(value < 1){
+        } else if(value < 1 || value == 0){
             scope.chart[0].column8[f]++;
         }
     }
@@ -1866,7 +1866,7 @@ function totalsLoop(){
         var value = scope.chart[0].column2[f];
         if(value > 1){
             scope.chart[0].column7[f]++;
-        } else if(value < 1){
+        } else if(value < 1 || value == 0){
             scope.chart[0].column8[f]++;
         }
     }
@@ -1874,7 +1874,7 @@ function totalsLoop(){
         var value = scope.chart[0].column3[f];
         if(value > 1){
             scope.chart[0].column7[f]++;
-        } else if(value < 1){
+        } else if(value < 1 || value == 0){
             scope.chart[0].column8[f]++;
         }
     }
@@ -1882,7 +1882,7 @@ function totalsLoop(){
         var value = scope.chart[0].column4[f];
         if(value > 1){
             scope.chart[0].column7[f]++;
-        } else if(value < 1){
+        } else if(value < 1 || value == 0){
             scope.chart[0].column8[f]++;
         }
     }
@@ -1890,7 +1890,7 @@ function totalsLoop(){
         var value = scope.chart[0].column5[f];
         if(value > 1){
             scope.chart[0].column7[f]++;
-        } else if(value < 1){
+        } else if(value < 1 || value == 0){
             scope.chart[0].column8[f]++;
         }
     }
@@ -1898,7 +1898,7 @@ function totalsLoop(){
         var value = scope.chart[0].column6[f];
         if(value > 1){
             scope.chart[0].column7[f]++;
-        } else if(value < 1){
+        } else if(value < 1 || value == 0){
             scope.chart[0].column8[f]++;
         }
     }
@@ -1923,6 +1923,8 @@ function cleanUp(){
             scope.chart[0].column1[f] = '1/2';
         } else if(value == 0.25){
             scope.chart[0].column1[f] = '1/4';
+        } else if(value == 0){
+            scope.chart[0].column1[f] = 'NONE';
         }
     }
     for(var f = 0; f <= 17; f++){
@@ -1933,6 +1935,8 @@ function cleanUp(){
             scope.chart[0].column2[f] = '1/2';
         } else if(value == 0.25){
             scope.chart[0].column2[f] = '1/4';
+        } else if(value == 0){
+            scope.chart[0].column2[f] = 'NONE';
         }
     }
     for(var f = 0; f <= 17; f++){
@@ -1943,6 +1947,8 @@ function cleanUp(){
             scope.chart[0].column3[f] = '1/2';
         } else if(value == 0.25){
             scope.chart[0].column3[f] = '1/4';
+        } else if(value == 0){
+            scope.chart[0].column3[f] = 'NONE';
         }
     }
     for(var f = 0; f <= 17; f++){
@@ -1953,6 +1959,8 @@ function cleanUp(){
             scope.chart[0].column4[f] = '1/2';
         } else if(value == 0.25){
             scope.chart[0].column4[f] = '1/4';
+        } else if(value == 0){
+            scope.chart[0].column4[f] = 'NONE';
         }
     }
     for(var f = 0; f <= 17; f++){
@@ -1963,6 +1971,8 @@ function cleanUp(){
             scope.chart[0].column5[f] = '1/2';
         } else if(value == 0.25){
             scope.chart[0].column5[f] = '1/4';
+        } else if(value == 0){
+            scope.chart[0].column5[f] = 'NONE';
         }
     }
     for(var f = 0; f <= 17; f++){
@@ -1973,6 +1983,8 @@ function cleanUp(){
             scope.chart[0].column6[f] = '1/2';
         } else if(value == 0.25){
             scope.chart[0].column6[f] = '1/4';
+        } else if(value == 0){
+            scope.chart[0].column6[f] = 'NONE';
         }
     }
 }
