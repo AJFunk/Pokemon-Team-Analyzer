@@ -90,6 +90,11 @@
 
 .pokedex {
     padding:0 10px;
+    height: 300px;
+    overflow: scroll;
+    width: 50%;
+    margin: 0 auto 20px auto;
+    border: 1px solid black;
 }
 
 .pokedex .col-sm-4 {

@@ -1,6 +1,25 @@
-<div class="container-fluid" style="text-align:center;">
+<div class="container-fluid">
 
-	<h1>Pokedex</h1>
+	<h1 style="text-align:center;">Pokedex</h1>
+	<button onclick="pokedexInit('none', 'none');">All</button>
+	<button onclick="pokedexInit('type', 'Normal');">Normal</button>
+	<button onclick="pokedexInit('type', 'Fighting');">Fighting</button>
+	<button onclick="pokedexInit('type', 'Flying');">Flying</button>
+	<button onclick="pokedexInit('type', 'Poison');">Poison</button>
+	<button onclick="pokedexInit('type', 'Ground');">Ground</button>
+	<button onclick="pokedexInit('type', 'Rock');">Rock</button>
+	<button onclick="pokedexInit('type', 'Bug');">Bug</button>
+	<button onclick="pokedexInit('type', 'Ghost');">Ghost</button>
+	<button onclick="pokedexInit('type', 'Steel');">Steel</button>
+	<button onclick="pokedexInit('type', 'Fire');">Fire</button>
+	<button onclick="pokedexInit('type', 'Water');">Water</button>
+	<button onclick="pokedexInit('type', 'Grass');">Grass</button>
+	<button onclick="pokedexInit('type', 'Electric');">Electric</button>
+	<button onclick="pokedexInit('type', 'Psychic');">Psychic</button>
+	<button onclick="pokedexInit('type', 'Ice');">Ice</button>
+	<button onclick="pokedexInit('type', 'Dragon');">Dragon</button>
+	<button onclick="pokedexInit('type', 'Dark');">Dark</button>
+	<button onclick="pokedexInit('type', 'Fairy');">Fairy</button>
 	<div class="row pokedex">
 
 
@@ -13,10 +32,83 @@
 <script type="text/javascript">
 var scope = angular.element($('#pokemon1type1')).scope();
 
-for(var p = 0; p < 151; p++){
-	var entries = "<div class='col-xs-2'><img src='" + scope.pokemon[p].image + "'style='width:100%;'><span class='id'>#" + scope.pokemon[p].id + "</span>" + scope.pokemon[p].name + "<br>" + scope.pokemon[p].types[0] + "/" + scope.pokemon[p].types[1] + "</div>";
-	$('.pokedex').append(entries);
+function pokedexInit(filterType, filter){
+	$('.pokedex').empty();
+	for(var p = 0; p < 151; p++){
+		if(pokedexFilter(filterType, filter, p) == 1){
+			var entry = "<div class='col-xs-12'><span class='id'>#" + scope.pokemon[p].id + " </span>" + scope.pokemon[p].name + " <span class='pokemonType pokedexType1'>" + scope.pokemon[p].types[0] + "</span>";
+			if(scope.pokemon[p].types[1]){
+				entry = entry + " / <span class='pokemonType pokedexType2'>" + scope.pokemon[p].types[1] + "</span></div>";
+			} else {
+				entry = entry + "</div>";
+			}
 
+			$('.pokedex').append(entry);
+
+			var pokedexType1 = $('.pokedexType1');
+			var m = pokedexType1.html();
+		    if(m == 'Normal'){pokedexType1.css('background-color', '#A8A878');}
+		    else if(m == 'Fighting'){pokedexType1.css('background-color', '#C12D25');}
+		    else if(m == 'Flying'){pokedexType1.css('background-color', '#A890F0');}
+		    else if(m == 'Poison'){pokedexType1.css('background-color', '#A040A0');}
+		    else if(m == 'Ground'){pokedexType1.css('background-color', '#E0C068');}
+		    else if(m == 'Rock'){pokedexType1.css('background-color', '#B8A038');}
+		    else if(m == 'Bug'){pokedexType1.css('background-color', '#A8B820');}
+		    else if(m == 'Ghost'){pokedexType1.css('background-color', '#705898');}
+		    else if(m == 'Steel'){pokedexType1.css('background-color', '#B8B8D0');}
+		    else if(m == 'Fire'){pokedexType1.css('background-color', '#F08030');}
+		    else if(m == 'Water'){pokedexType1.css('background-color', '#6890F0');}
+		    else if(m == 'Grass'){pokedexType1.css('background-color', '#78C850');}
+		    else if(m == 'Electric'){pokedexType1.css('background-color', '#F8D030');}
+		    else if(m == 'Psychic'){pokedexType1.css('background-color', '#F85888');}
+		    else if(m == 'Ice'){pokedexType1.css('background-color', '#98D8D8');}
+		    else if(m == 'Dragon'){pokedexType1.css('background-color', '#7038F8');}
+		    else if(m == 'Dark'){pokedexType1.css('background-color', '#705848');}
+		    else if(m == 'Fairy'){pokedexType1.css('background-color', '#FF65D5');}
+		    pokedexType1.removeClass('pokedexType1');
+
+		    var pokedexType2 = $('.pokedexType2');
+		    var m = pokedexType2.html();
+		    if(m == 'Normal'){pokedexType2.css('background-color', '#A8A878');}
+		    else if(m == 'Fighting'){pokedexType2.css('background-color', '#C12D25');}
+		    else if(m == 'Flying'){pokedexType2.css('background-color', '#A890F0');}
+		    else if(m == 'Poison'){pokedexType2.css('background-color', '#A040A0');}
+		    else if(m == 'Ground'){pokedexType2.css('background-color', '#E0C068');}
+		    else if(m == 'Rock'){pokedexType2.css('background-color', '#B8A038');}
+		    else if(m == 'Bug'){pokedexType2.css('background-color', '#A8B820');}
+		    else if(m == 'Ghost'){pokedexType2.css('background-color', '#705898');}
+		    else if(m == 'Steel'){pokedexType2.css('background-color', '#B8B8D0');}
+		    else if(m == 'Fire'){pokedexType2.css('background-color', '#F08030');}
+		    else if(m == 'Water'){pokedexType2.css('background-color', '#6890F0');}
+		    else if(m == 'Grass'){pokedexType2.css('background-color', '#78C850');}
+		    else if(m == 'Electric'){pokedexType2.css('background-color', '#F8D030');}
+		    else if(m == 'Psychic'){pokedexType2.css('background-color', '#F85888');}
+		    else if(m == 'Ice'){pokedexType2.css('background-color', '#98D8D8');}
+		    else if(m == 'Dragon'){pokedexType2.css('background-color', '#7038F8');}
+		    else if(m == 'Dark'){pokedexType2.css('background-color', '#705848');}
+		    else if(m == 'Fairy'){pokedexType2.css('background-color', '#FF65D5');}
+		    pokedexType2.removeClass('pokedexType2');
+		}
+	}
 }
+
+function pokedexFilter(filterType, filter, id){
+	if(filterType == 'none'){
+		return 1;
+	} else if(filterType == 'type'){
+		if(scope.pokemon[id].types[0] == filter || scope.pokemon[id].types[1] == filter){
+			return 1;
+		} else{
+			return 0;
+		}
+	}
+}
+
+var filterType = "type";
+var filter = "Water";
+pokedexInit(filterType, filter);
+
+
+
 
 </script>
