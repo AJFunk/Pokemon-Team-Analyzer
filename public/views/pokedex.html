@@ -1,29 +1,27 @@
 <div class="container-fluid">
 
 	<h1 style="text-align:center;">Pokedex</h1>
-	<button onclick="pokedexInit('none', 'none');">All</button>
-	<button onclick="pokedexInit('type', 'Normal');">Normal</button>
-	<button onclick="pokedexInit('type', 'Fighting');">Fighting</button>
-	<button onclick="pokedexInit('type', 'Flying');">Flying</button>
-	<button onclick="pokedexInit('type', 'Poison');">Poison</button>
-	<button onclick="pokedexInit('type', 'Ground');">Ground</button>
-	<button onclick="pokedexInit('type', 'Rock');">Rock</button>
-	<button onclick="pokedexInit('type', 'Bug');">Bug</button>
-	<button onclick="pokedexInit('type', 'Ghost');">Ghost</button>
-	<button onclick="pokedexInit('type', 'Steel');">Steel</button>
-	<button onclick="pokedexInit('type', 'Fire');">Fire</button>
-	<button onclick="pokedexInit('type', 'Water');">Water</button>
-	<button onclick="pokedexInit('type', 'Grass');">Grass</button>
-	<button onclick="pokedexInit('type', 'Electric');">Electric</button>
-	<button onclick="pokedexInit('type', 'Psychic');">Psychic</button>
-	<button onclick="pokedexInit('type', 'Ice');">Ice</button>
-	<button onclick="pokedexInit('type', 'Dragon');">Dragon</button>
-	<button onclick="pokedexInit('type', 'Dark');">Dark</button>
-	<button onclick="pokedexInit('type', 'Fairy');">Fairy</button>
-	<div class="row pokedex">
-
-
-	</div>
+	<button id="all" onclick="pokedexInit('none', 'none');">All</button>
+	<button id="normal" onclick="pokedexInit('type', 'Normal');">Normal</button>
+	<button id="fighting" onclick="pokedexInit('type', 'Fighting');">Fighting</button>
+	<button id="flying" onclick="pokedexInit('type', 'Flying');">Flying</button>
+	<button id="poison" onclick="pokedexInit('type', 'Poison');">Poison</button>
+	<button id="ground" onclick="pokedexInit('type', 'Ground');">Ground</button>
+	<button id="rock" onclick="pokedexInit('type', 'Rock');">Rock</button>
+	<button id="bug" onclick="pokedexInit('type', 'Bug');">Bug</button>
+	<button id="ghost" onclick="pokedexInit('type', 'Ghost');">Ghost</button>
+	<button id="steel" onclick="pokedexInit('type', 'Steel');">Steel</button>
+	<button id="fire" onclick="pokedexInit('type', 'Fire');">Fire</button>
+	<button id="water" onclick="pokedexInit('type', 'Water');">Water</button>
+	<button id="grass" onclick="pokedexInit('type', 'Grass');">Grass</button>
+	<button id="electric" onclick="pokedexInit('type', 'Electric');">Electric</button>
+	<button id="psychic" onclick="pokedexInit('type', 'Psychic');">Psychic</button>
+	<button id="ice" onclick="pokedexInit('type', 'Ice');">Ice</button>
+	<button id="dragon" onclick="pokedexInit('type', 'Dragon');">Dragon</button>
+	<button id="dark" onclick="pokedexInit('type', 'Dark');">Dark</button>
+	<button id="fairy" onclick="pokedexInit('type', 'Fairy');">Fairy</button>
+	
+	<div class="row pokedex"></div>
 
 		
 
@@ -36,7 +34,7 @@ function pokedexInit(filterType, filter){
 	$('.pokedex').empty();
 	for(var p = 0; p < 151; p++){
 		if(pokedexFilter(filterType, filter, p) == 1){
-			var entry = "<div class='col-xs-12'><span class='id'>#" + scope.pokemon[p].id + " </span>" + scope.pokemon[p].name + " <span class='pokemonType pokedexType1'>" + scope.pokemon[p].types[0] + "</span>";
+			var entry = "<div class='col-xs-4'><span class='id'>#" + scope.pokemon[p].id + " </span>" + scope.pokemon[p].name + "</div><div class='col-xs-8'><span class='pokemonType pokedexType1'>" + scope.pokemon[p].types[0] + "</span>";
 			if(scope.pokemon[p].types[1]){
 				entry = entry + " / <span class='pokemonType pokedexType2'>" + scope.pokemon[p].types[1] + "</span></div>";
 			} else {
@@ -103,12 +101,6 @@ function pokedexFilter(filterType, filter, id){
 		}
 	}
 }
-
-var filterType = "type";
-var filter = "Water";
-pokedexInit(filterType, filter);
-
-
 
 
 </script>

@@ -1,3 +1,10 @@
+button {
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin: 5px 0;
+}
+
 .main-content{padding:0;margin:0;width:100%;}
 .MainPokemonImg{width:100%;padding:10px 0;}
 #selections {max-width:550px;margin:0 auto;}
@@ -43,6 +50,7 @@
 }
 
 #topRow {background-color: #555555;}
+#all {background-color: #000000;}
 #normal {background-color: #A8A878;}
 #fighting {background-color: #C12D25;}
 #flying {background-color: #A890F0;}
@@ -92,11 +100,16 @@
     padding:0 10px;
     height: 300px;
     overflow: scroll;
-    width: 50%;
+    width: 75%;
     margin: 0 auto 20px auto;
     border: 1px solid black;
 }
 
 .pokedex .col-sm-4 {
     text-align: center;
+}
+
+.pokedex .pokemonType{
+    border-radius: 5px;
+    padding: 2px 4px;
 }
