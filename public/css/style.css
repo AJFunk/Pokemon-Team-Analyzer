@@ -99,7 +99,8 @@ button {
 .pokedex {
     padding:0 10px;
     height: 300px;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     width: 75%;
     margin: 0 auto 20px auto;
     border: 1px solid black;
@@ -112,4 +113,16 @@ button {
 .pokedex .pokemonType{
     border-radius: 5px;
     padding: 2px 4px;
+}
+
+.pokedexImg {
+    width:100%;
+}
+
+#colorbox {
+    background: #fff;
+}
+
+#colorbox .col-sm-4{
+    text-align: center;
 }

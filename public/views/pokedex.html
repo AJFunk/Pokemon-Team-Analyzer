@@ -34,12 +34,15 @@ function pokedexInit(filterType, filter){
 	$('.pokedex').empty();
 	for(var p = 0; p < 151; p++){
 		if(pokedexFilter(filterType, filter, p) == 1){
-			var entry = "<div class='col-xs-4'><span class='id'>#" + scope.pokemon[p].id + " </span>" + scope.pokemon[p].name + "</div><div class='col-xs-8'><span class='pokemonType pokedexType1'>" + scope.pokemon[p].types[0] + "</span>";
+			var name = scope.pokemon[p].name;
+			var entry = "<div class='col-xs-4'><a class='pokedexEntry' href='#' onclick='var id = $(this).find(\"> span\").html();pokedexPopUp(id);'>#<span class='id'>" + scope.pokemon[p].id + " </span>" + scope.pokemon[p].name + "</a></div><div class='col-xs-4'><span class='pokemonType pokedexType1'>" + scope.pokemon[p].types[0] + "</span> ";
 			if(scope.pokemon[p].types[1]){
 				entry = entry + " / <span class='pokemonType pokedexType2'>" + scope.pokemon[p].types[1] + "</span></div>";
 			} else {
-				entry = entry + "</div>";
+				entry = entry + "</div>"
 			}
+
+			entry = entry + "<div class='col-xs-4'>" + scope.pokemon[p].HP + "/" + scope.pokemon[p].Atk + "/" + scope.pokemon[p].Def + "/" + scope.pokemon[p].SpAtk + "/" + scope.pokemon[p].SpDef + "/" + scope.pokemon[p].Spd + "</div>"
 
 			$('.pokedex').append(entry);
 
@@ -103,4 +106,56 @@ function pokedexFilter(filterType, filter, id){
 }
 
 
+function pokedexPopUp(id){
+	id = parseInt(id) - 1;
+	if(scope.pokemon[id].types[1]){
+		$.colorbox({html:"<div class='container'><div class='row'><h1 style='text-align:center;'>" + scope.pokemon[id].name + "</h1><div class='col-sm-4'><img src='" + scope.pokemon[id].image + "' class='pokedexImg'><span class='pokemonType popupType1'>" + scope.pokemon[id].types[0] + "</span> / " + "<span class='pokemonType popupType2'>" + scope.pokemon[id].types[1] + "</span></div><div class='col-sm-8'></div></div></div>" ,width:"80%", height:"80%"});
+	} else {
+		$.colorbox({html:"<div class='container'><div class='row'><h1 style='text-align:center;'>" + scope.pokemon[id].name + "</h1><div class='col-sm-4'><img src='" + scope.pokemon[id].image + "' class='pokedexImg'><span class='pokemonType popupType1'>" + scope.pokemon[id].types[0] + "</span>" + "</div><div class='col-sm-8'></div></div></div>" ,width:"80%", height:"80%"});
+	}
+
+	var popupType1 = $('.popupType1');
+	var n = popupType1.html();
+    if(n == 'Normal'){popupType1.css('background-color', '#A8A878');}
+    else if(n == 'Fighting'){popupType1.css('background-color', '#C12D25');}
+    else if(n == 'Flying'){popupType1.css('background-color', '#A890F0');}
+    else if(n == 'Poison'){popupType1.css('background-color', '#A040A0');}
+    else if(n == 'Ground'){popupType1.css('background-color', '#E0C068');}
+    else if(n == 'Rock'){popupType1.css('background-color', '#B8A038');}
+    else if(n == 'Bug'){popupType1.css('background-color', '#A8B820');}
+    else if(n == 'Ghost'){popupType1.css('background-color', '#705898');}
+    else if(n == 'Steel'){popupType1.css('background-color', '#B8B8D0');}
+    else if(n == 'Fire'){popupType1.css('background-color', '#F08030');}
+    else if(n == 'Water'){popupType1.css('background-color', '#6890F0');}
+    else if(n == 'Grass'){popupType1.css('background-color', '#78C850');}
+    else if(n == 'Electric'){popupType1.css('background-color', '#F8D030');}
+    else if(n == 'Psychic'){popupType1.css('background-color', '#F85888');}
+    else if(n == 'Ice'){popupType1.css('background-color', '#98D8D8');}
+    else if(n == 'Dragon'){popupType1.css('background-color', '#7038F8');}
+    else if(n == 'Dark'){popupType1.css('background-color', '#705848');}
+    else if(n == 'Fairy'){popupType1.css('background-color', '#FF65D5');}
+
+    var popupType2 = $('.popupType2');
+    var m = popupType2.html();
+    if(m == 'Normal'){popupType2.css('background-color', '#A8A878');}
+    else if(m == 'Fighting'){popupType2.css('background-color', '#C12D25');}
+    else if(m == 'Flying'){popupType2.css('background-color', '#A890F0');}
+    else if(m == 'Poison'){popupType2.css('background-color', '#A040A0');}
+    else if(m == 'Ground'){popupType2.css('background-color', '#E0C068');}
+    else if(m == 'Rock'){popupType2.css('background-color', '#B8A038');}
+    else if(m == 'Bug'){popupType2.css('background-color', '#A8B820');}
+    else if(m == 'Ghost'){popupType2.css('background-color', '#705898');}
+    else if(m == 'Steel'){popupType2.css('background-color', '#B8B8D0');}
+    else if(m == 'Fire'){popupType2.css('background-color', '#F08030');}
+    else if(m == 'Water'){popupType2.css('background-color', '#6890F0');}
+    else if(m == 'Grass'){popupType2.css('background-color', '#78C850');}
+    else if(m == 'Electric'){popupType2.css('background-color', '#F8D030');}
+    else if(m == 'Psychic'){popupType2.css('background-color', '#F85888');}
+    else if(m == 'Ice'){popupType2.css('background-color', '#98D8D8');}
+    else if(m == 'Dragon'){popupType2.css('background-color', '#7038F8');}
+    else if(m == 'Dark'){popupType2.css('background-color', '#705848');}
+    else if(m == 'Fairy'){popupType2.css('background-color', '#FF65D5');}
+}
+
 </script>
+
