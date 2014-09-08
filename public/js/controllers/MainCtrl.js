@@ -2140,6 +2140,8 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
 
     ];	
 	// END POKEMON SCOPE
+
+
 	$scope.alphabetical = 'name';
     $scope.chart = [
         {

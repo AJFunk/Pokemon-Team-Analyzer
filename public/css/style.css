@@ -94,6 +94,7 @@ button {
 
 .footer {
     background-color: #2b2b2b;
+    color: #fff;
 }
 
 .pokedex {
@@ -106,7 +107,11 @@ button {
     border: 1px solid black;
 }
 
-.pokedex .col-sm-4 {
+.pokedex .col-sm-4, #colorbox .col-xs-2, #colorbox .col-xs-4, #colorbox .col-xs-6, #colorbox .col-xs-12 {
+    text-align: center;
+}
+
+h1, h3 {
     text-align: center;
 }
 
@@ -120,9 +125,23 @@ button {
 }
 
 #colorbox {
-    background: #fff;
+    background: lightgray;
 }
 
 #colorbox .col-sm-4{
     text-align: center;
+}
+
+#cboxClose {
+    position: absolute;
+    top: 0;
+    right: 0.5em;
+}
+
+.ability1-question:hover, .ability2-question:hover, .ability3-question:hover {
+    cursor: pointer;
+}
+
+.ability-info {
+    padding:2em;
 }

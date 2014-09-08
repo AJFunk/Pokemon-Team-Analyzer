@@ -31,21 +31,28 @@
 var scope = angular.element($('#pokemon1type1')).scope();
 
 function pokedexInit(filterType, filter){
+	// Clear Pokedex
 	$('.pokedex').empty();
+
+	// Loop through all Pokemon
 	for(var p = 0; p < 151; p++){
+		// Check filter
 		if(pokedexFilter(filterType, filter, p) == 1){
-			var name = scope.pokemon[p].name;
-			var entry = "<div class='col-xs-4'><a class='pokedexEntry' href='#' onclick='var id = $(this).find(\"> span\").html();pokedexPopUp(id);'>#<span class='id'>" + scope.pokemon[p].id + " </span>" + scope.pokemon[p].name + "</a></div><div class='col-xs-4'><span class='pokemonType pokedexType1'>" + scope.pokemon[p].types[0] + "</span> ";
+			// Create HTML string for Pokedex entry
+			var entry = "<div class='col-xs-6'><a class='pokedexEntry' href='#' onclick='var id = $(this).find(\"> span\").html();pokedexPopUp(id);'>#<span class='id'>" + scope.pokemon[p].id + " </span>" + scope.pokemon[p].name + "</a></div><div class='col-xs-6'><span class='pokemonType pokedexType1'>" + scope.pokemon[p].types[0] + "</span> ";
+			// Add 2nd type if it exists
 			if(scope.pokemon[p].types[1]){
 				entry = entry + " / <span class='pokemonType pokedexType2'>" + scope.pokemon[p].types[1] + "</span></div>";
 			} else {
 				entry = entry + "</div>"
 			}
 
-			entry = entry + "<div class='col-xs-4'>" + scope.pokemon[p].HP + "/" + scope.pokemon[p].Atk + "/" + scope.pokemon[p].Def + "/" + scope.pokemon[p].SpAtk + "/" + scope.pokemon[p].SpDef + "/" + scope.pokemon[p].Spd + "</div>"
+			//entry = entry + "<div class='col-xs-4'>" + scope.pokemon[p].HP + "/" + scope.pokemon[p].Atk + "/" + scope.pokemon[p].Def + "/" + scope.pokemon[p].SpAtk + "/" + scope.pokemon[p].SpDef + "/" + scope.pokemon[p].Spd + "</div>"
 
+			// Add entry to Pokedex
 			$('.pokedex').append(entry);
 
+			// Add colors to types
 			var pokedexType1 = $('.pokedexType1');
 			var m = pokedexType1.html();
 		    if(m == 'Normal'){pokedexType1.css('background-color', '#A8A878');}
@@ -89,9 +96,9 @@ function pokedexInit(filterType, filter){
 		    else if(m == 'Dark'){pokedexType2.css('background-color', '#705848');}
 		    else if(m == 'Fairy'){pokedexType2.css('background-color', '#FF65D5');}
 		    pokedexType2.removeClass('pokedexType2');
-		}
-	}
-}
+		} // end if statement
+	} //end For loop
+} //end pokedexInit()
 
 function pokedexFilter(filterType, filter, id){
 	if(filterType == 'none'){
@@ -107,13 +114,435 @@ function pokedexFilter(filterType, filter, id){
 
 
 function pokedexPopUp(id){
+	// Convert id from string to int
 	id = parseInt(id) - 1;
+
+	// Check for # of types, create HTML string
 	if(scope.pokemon[id].types[1]){
-		$.colorbox({html:"<div class='container'><div class='row'><h1 style='text-align:center;'>" + scope.pokemon[id].name + "</h1><div class='col-sm-4'><img src='" + scope.pokemon[id].image + "' class='pokedexImg'><span class='pokemonType popupType1'>" + scope.pokemon[id].types[0] + "</span> / " + "<span class='pokemonType popupType2'>" + scope.pokemon[id].types[1] + "</span></div><div class='col-sm-8'></div></div></div>" ,width:"80%", height:"80%"});
+		var pokemonDataType = "<span class='pokemonType popupType1'>" + scope.pokemon[id].types[0] + "</span> / " + "<span class='pokemonType popupType2'>" + scope.pokemon[id].types[1] + "</span>";
 	} else {
-		$.colorbox({html:"<div class='container'><div class='row'><h1 style='text-align:center;'>" + scope.pokemon[id].name + "</h1><div class='col-sm-4'><img src='" + scope.pokemon[id].image + "' class='pokedexImg'><span class='pokemonType popupType1'>" + scope.pokemon[id].types[0] + "</span>" + "</div><div class='col-sm-8'></div></div></div>" ,width:"80%", height:"80%"});
+		var pokemonDataType = "<span class='pokemonType popupType1'>" + scope.pokemon[id].types[0] + "</span>";
 	}
 
+	if(scope.pokemon[id].abilities[2]) {
+		var abilities = "<div class='col-xs-4'><span id='ability1'>" + scope.pokemon[id].abilities[0] + "</span> <i class='fa fa-question-circle ability1-question'></i></div><div class='col-xs-4'><span id='ability2'>" + scope.pokemon[id].abilities[1] + "</span> <i class='fa fa-question-circle ability2-question'></i></div><div class='col-xs-4'><span id='ability3'>" + scope.pokemon[id].abilities[2] + "</span> <i class='fa fa-question-circle ability3-question'></i></div>";
+	} else if(scope.pokemon[id].abilities[1]) {
+		var abilities = "<div class='col-xs-6'><span id='ability1'>" + scope.pokemon[id].abilities[0] + "</span> <i class='fa fa-question-circle ability1-question'></i></div><div class='col-xs-6'><span id='ability2'>" + scope.pokemon[id].abilities[1] + "</span> <i class='fa fa-question-circle ability2-question'></i></div>";
+	} else {
+		var abilities = "<div class='col-xs-12'><span id='ability1'>" + scope.pokemon[id].abilities[0] + "</span> <i class='fa fa-question-circle ability1-question'></i></div>";
+	}
+
+
+	// Concatenate all data into one HTML string
+	var pokemonData = "<div class='container-fluid'><div class='row'><h1>" + scope.pokemon[id].name + "</h1><div class='col-sm-4'><img src='" + scope.pokemon[id].image + "' class='pokedexImg'>" + pokemonDataType + "</div><div class='col-sm-8'><h3>Base Stats</h3><div class='container' style='width:80%;'><div class='row'><div class='col-xs-2'>HP</div><div class='col-xs-2'>Attack</div><div class='col-xs-2'>Defense</div><div class='col-xs-2'>Sp. Atk</div><div class='col-xs-2'>Sp. Def</div><div class='col-xs-2'>Speed</div></div><div class='row'><div class='col-xs-2'>" + scope.pokemon[id].HP + "</div><div class='col-xs-2'>" + scope.pokemon[id].Atk + "</div><div class='col-xs-2'>" + scope.pokemon[id].Def + "</div><div class='col-xs-2'>" + scope.pokemon[id].SpDef + "</div><div class='col-xs-2'>" + scope.pokemon[id].SpAtk + "</div><div class='col-xs-2'>" + scope.pokemon[id].Spd + "</div></div><br><br><div class='row'><h3>Abilities</h3>" + abilities + "</div><div class='row ability-info'></div></div></div></div></div>";
+
+
+
+	// Open colorbox for selected pokemon
+	$.colorbox({html:pokemonData ,width:"80%", height:"80%"});
+	var ability1 = $('#ability1').html();
+	var ability2 = $('#ability2').html();
+	var ability3 = $('#ability3').html();
+	$('.ability1-question').click(function() {
+		abilityInfo(ability1);
+	});
+	$('.ability2-question').click(function() {
+		abilityInfo(ability2);
+	});
+	$('.ability3-question').click(function() {
+		abilityInfo(ability3);
+	});
+
+	function abilityInfo(ability){
+		$('.ability-info').empty();
+		if(ability == 'Adaptability'){
+			var desc = 'Powers up moves of the same type.';
+		} else if(ability == 'Aerilate'){
+			var desc = 'Powers up moves of the same type.';
+		} else if(ability == 'Aftermath'){
+			var desc = 'Damages the foe landing the finishing hit.';
+		} else if(ability == 'Air Lock'){
+			var desc = 'Eliminates the effects of weather.';
+		} else if(ability == 'Analytic'){
+			var desc = 'Strengthens moves when moving last.';
+		} else if(ability == 'Anger Point'){
+			var desc = 'Raises Attack upon taking a critical hit.';
+		} else if(ability == 'Anticipation'){
+			var desc = 'Senses the foe’s dangerous moves.';
+		} else if(ability == 'Arena Trap'){
+			var desc = 'Prevents the foe from fleeing.';
+		} else if(ability == 'Aroma Veil'){
+			var desc = 'Protects allies from attacks that limit their move choices.';
+		} else if(ability == 'Aura Break'){
+			var desc = 'The effects of "Aura" Abilities are reversed.';
+		} else if(ability == 'Bad Dreams'){
+			var desc = 'Reduces a sleeping foe’s HP.';
+		} else if(ability == 'Battle Armor'){
+			var desc = 'The Pokémon is protected against critical hits.';
+		} else if(ability == 'Big Pecks'){
+			var desc = 'Protects the Pokémon from Defense-lowering attacks.';
+		} else if(ability == 'Blaze'){
+			var desc = 'Powers up Fire-type moves in a pinch.';
+		} else if(ability == 'Bulletproof'){
+			var desc = 'Protects the Pokémon from some ball and bomb moves.';
+		} else if(ability == 'Cacophony'){
+			var desc = 'Avoids sound-based moves.';
+		} else if(ability == 'Cheek Pouch'){
+			var desc = 'Restores HP as well when the Pokémon eats a Berry.';
+		} else if(ability == 'Chlorophyll'){
+			var desc = 'Boosts the Pokémon’s Speed in sunshine.';
+		} else if(ability == 'Clear Body'){
+			var desc = 'Prevents the Pokémon’s stats from being lowered.';
+		} else if(ability == 'Cloud Nine'){
+			var desc = 'Eliminates the effects of weather.';
+		} else if(ability == 'Color Change'){
+			var desc = 'Changes the Pokémon’s type to the foe’s move.';
+		} else if(ability == 'Competitive'){
+			var desc = 'Boosts the Sp.Atk stat when a stat is lowered.';
+		} else if(ability == 'Compound Eyes'){
+			var desc = 'The Pokémon’s accuracy is boosted.';
+		} else if(ability == 'Contrary'){
+			var desc = 'Inverts stat modifiers.';
+		} else if(ability == 'Cursed Body'){
+			var desc = 'Has a 30% chance of Disabling any move that hits the Pokémon.';
+		} else if(ability == 'Cute Charm'){
+			var desc = 'Contact with the Pokémon may cause infatuation.';
+		} else if(ability == 'Damp'){
+			var desc = 'Prevents combatants from self destructing.';
+		} else if(ability == 'Dark Aura'){
+			var desc = 'Powers up each Pokémon\'s Dark-type moves.';
+		} else if(ability == 'Defeatist'){
+			var desc = 'Halves Attack and Special Attack below 50% HP.';
+		} else if(ability == 'Defiant'){
+			var desc = 'Raises Attack two stages upon having any stat lowered.';
+		} else if(ability == 'Download'){
+			var desc = 'Adjusts power according to the foe’s lowest defensive stat.';
+		} else if(ability == 'Drizzle'){
+			var desc = 'The Pokémon makes it rain if it appears in battle.';
+		} else if(ability == 'Drought'){
+			var desc = 'The Pokémon makes it sunny if it is in battle.';
+		} else if(ability == 'Dry Skin'){
+			var desc = 'Reduces HP if it is hot. Water restores HP.';
+		} else if(ability == 'Early Bird'){
+			var desc = 'The Pokémon awakens quickly from sleep.';
+		} else if(ability == 'Effect Spore'){
+			var desc = 'Contact may paralyze, poison, or cause sleep.';
+		} else if(ability == 'Fairy Aura'){
+			var desc = 'Powers up each Pokémon\'s Fairy-type moves.';
+		} else if(ability == 'Filter'){
+			var desc = 'Powers down supereffective moves.';
+		} else if(ability == 'Flame Body'){
+			var desc = 'Contact with the Pokémon may burn the foe.';
+		} else if(ability == 'Flare Boost'){
+			var desc = 'Increases Special Attack to 1.5× when burned.';
+		} else if(ability == 'Flash Fire'){
+			var desc = 'Powers up Fire-type moves if hit by a fire move.';
+		} else if(ability == 'Flower Gift'){
+			var desc = 'Powers up party Pokémon when it is sunny.';
+		} else if(ability == 'Flower Veil'){
+			var desc = 'Prevents lowering of ally Grass-type Pokémon\'s stats.';
+		} else if(ability == 'Forecast'){
+			var desc = 'Transforms with the weather.';
+		} else if(ability == 'Forewarn'){
+			var desc = 'Determines what moves the foe has.';
+		} else if(ability == 'Friend Guard'){
+			var desc = 'Decreases damage inflicted against ally Pokémon.';
+		} else if(ability == 'Frisk'){
+			var desc = 'The Pokémon can check the foe’s held item.';
+		} else if(ability == 'Fur Coat'){
+			var desc = 'Halves damage from physical moves.';
+		} else if(ability == 'Gale Wings'){
+			var desc = 'Gives priority to Flying-type moves.';
+		} else if(ability == 'Gluttony'){
+			var desc = 'Encourages the early use of a held Berry.';
+		} else if(ability == 'Gooey'){
+			var desc = 'Contact with the Pokémon lowers the attacker\'s Speed stat.';
+		} else if(ability == 'Grass Pelt'){
+			var desc = 'Boosts the Defense stat in Grassy Terrain.';
+		} else if(ability == 'Guts'){
+			var desc = 'Boosts Attack if there is a status problem.';
+		} else if(ability == 'Harvest'){
+			var desc = 'Restores any held Berry after the turn on which it is used.';
+		} else if(ability == 'Healer'){
+			var desc = 'Has a 30% chance of curing each adjacent ally of any major status ailment after each turn.';
+		} else if(ability == 'Heatproof'){
+			var desc = 'Weakens the power of Fire-type moves.';
+		} else if(ability == 'Heavy Metal'){
+			var desc = 'Doubles the Pokémon\'s weight.';
+		} else if(ability == 'Honey Gather'){
+			var desc = 'The Pokémon may gather Honey from somewhere.';
+		} else if(ability == 'Huge Power'){
+			var desc = 'Raises the Pokémon’s Attack stat.';
+		} else if(ability == 'Hustle'){
+			var desc = 'Boosts the Attack stat, but lowers accuracy.';
+		} else if(ability == 'Hydration'){
+			var desc = 'Heals status problems if it is raining.';
+		} else if(ability == 'Hyper Cutter'){
+			var desc = 'Prevents the Attack stat from being lowered.';
+		} else if(ability == 'Ice Body'){
+			var desc = 'The Pokémon regains HP in a hailstorm.';
+		} else if(ability == 'Illuminate'){
+			var desc = 'Raises the likelihood of meeting wild Pokémon.';
+		} else if(ability == 'Illusion'){
+			var desc = 'Takes the appearance of the last conscious party Pokémon upon being sent out until hit by a damaging move.';
+		} else if(ability == 'Immunity'){
+			var desc = 'Prevents the Pokémon from getting poisoned.';
+		} else if(ability == 'Imposter'){
+			var desc = 'Transforms upon entering battle.';
+		} else if(ability == 'Infiltrator'){
+			var desc = 'Ignores Light Screen, Reflect, and Safeguard.';
+		} else if(ability == 'Inner Focus'){
+			var desc = 'The Pokémon is protected from flinching.';
+		} else if(ability == 'Insomnia'){
+			var desc = 'Prevents the Pokémon from falling asleep.';
+		} else if(ability == 'Intimidate'){
+			var desc = 'Lowers the foe’s Attack stat.';
+		} else if(ability == 'Iron Barbs'){
+			var desc = 'Damages attacking Pokémon for 1/8 their max HP on contact.';
+		} else if(ability == 'Iron Fist'){
+			var desc = 'Boosts the power of punching moves.';
+		} else if(ability == 'Justified'){
+			var desc = 'Raises Attack when hit by Dark-type moves.';
+		} else if(ability == 'Keen Eye'){
+			var desc = 'Prevents the Pokémon from losing accuracy.';
+		} else if(ability == 'Klutz'){
+			var desc = 'The Pokémon can’t use any held items.';
+		} else if(ability == 'Leaf Guard'){
+			var desc = 'Prevents status problems in sunny weather.';
+		} else if(ability == 'Levitate'){
+			var desc = 'Gives full immunity to all Ground-type moves.';
+		} else if(ability == 'Light Metal'){
+			var desc = 'Halves the Pokémon\'s weight.';
+		} else if(ability == 'Ligtning Rod'){
+			var desc = 'The Pokémon draws in all Electric-type moves.';
+		} else if(ability == 'Limber'){
+			var desc = 'The Pokémon is protected from paralysis.';
+		} else if(ability == 'Liquid Ooze'){
+			var desc = 'Inflicts damage on foes using any draining move.';
+		} else if(ability == 'Magic Bounce'){
+			var desc = 'Reflects most non-damaging moves back at their user.';
+		} else if(ability == 'Magic Guard'){
+			var desc = 'The Pokémon only takes damage from attacks.';
+		} else if(ability == 'Magician'){
+			var desc = 'The Pokémon steals the held item of a Pokémon it hits with a move.';
+		} else if(ability == 'Magma Armor'){
+			var desc = 'Prevents the Pokémon from becoming frozen.';
+		} else if(ability == 'Magnet Pull'){
+			var desc = 'Prevents Steel-type Pokémon from escaping.';
+		} else if(ability == 'Marvel Scale'){
+			var desc = 'Boosts Defense if there is a status problem.';
+		} else if(ability == 'Mega Launcher'){
+			var desc = 'Powers up aura and pulse moves.';
+		} else if(ability == 'Minus'){
+			var desc = 'Boosts Sp. Atk if another Pokémon has Plus.';
+		} else if(ability == 'Mold Breaker'){
+			var desc = 'Moves can be used regardless of Abilities.';
+		} else if(ability == 'Moody'){
+			var desc = 'Raises a random stat two stages and lowers another one stage after each turn.';
+		} else if(ability == 'Motor Drive'){
+			var desc = 'Raises Speed if hit by an Electric-type move.';
+		} else if(ability == 'Moxie'){
+			var desc = 'Raises Attack one stage upon KOing a Pokémon.';
+		} else if(ability == 'Multiscale'){
+			var desc = 'Halves damage taken from full HP.';
+		} else if(ability == 'Multitype'){
+			var desc = 'Changes type to match the held Plate.';
+		} else if(ability == 'Mummy'){
+			var desc = 'Contact with this Pokémon spreads this Ability.';
+		} else if(ability == 'Natural Cure'){
+			var desc = 'All status problems are healed upon switching out.';
+		} else if(ability == 'No Guard'){
+			var desc = 'Ensures the Pokémon and its foe’s attacks land.';
+		} else if(ability == 'Normalize'){
+			var desc = 'All the Pokémon’s moves become the Normal type.';
+		} else if(ability == 'Oblivious'){
+			var desc = 'Prevents the Pokémon from becoming infatuated.';
+		} else if(ability == 'Overcoat'){
+			var desc = 'Protects against damage from weather.';
+		} else if(ability == 'Overgrow'){
+			var desc = 'Powers up Grass-type moves in a pinch.';
+		} else if(ability == 'Own Tempo'){
+			var desc = 'Prevents the Pokémon from becoming confused.';
+		} else if(ability == 'Parental Bond'){
+			var desc = 'Parent and child attack together.';
+		} else if(ability == 'Pickpocket'){
+			var desc = 'Steals attacking Pokémon\'s held item on contact.';
+		} else if(ability == 'Pickup'){
+			var desc = 'The Pokémon may pick up items.';
+		} else if(ability == 'Pixilate'){
+			var desc = 'Normal-type moves become Fairy-type moves.';
+		} else if(ability == 'Plus'){
+			var desc = 'Boosts Sp. Atk if another Pokémon has Minus.';
+		} else if(ability == 'Poison Heal'){
+			var desc = 'Restores HP if the Pokémon is poisoned.';
+		} else if(ability == 'Poison Point'){
+			var desc = 'Contact with the Pokémon may poison the foe.';
+		} else if(ability == 'Poison Touch'){
+			var desc = 'Has a 30% chance of poisoning Pokémon upon contact when attacking.';
+		} else if(ability == 'Prankster'){
+			var desc = 'Raises non-damaging moves\' priority by one stage.';
+		} else if(ability == 'Pressure'){
+			var desc = 'The Pokémon raises the foe’s PP usage.';
+		} else if(ability == 'Protean'){
+			var desc = 'Changes the Pokémon\'s type to the same type of the move it is using.';
+		} else if(ability == 'Pure Power'){
+			var desc = 'Boosts the power of physical attacks.';
+		} else if(ability == 'Quick Feet'){
+			var desc = 'Boosts Speed if there is a status problem.';
+		} else if(ability == 'Rain Dish'){
+			var desc = 'The Pokémon gradually recovers HP in rain.';
+		} else if(ability == 'Rattled'){
+			var desc = 'Raises Speed one stage upon being hit by a Dark, Ghost, or Bug move.';
+		} else if(ability == 'Reckless'){
+			var desc = 'Powers up moves that have recoil damage.';
+		} else if(ability == 'Refrigerate'){
+			var desc = 'Normal-type moves become Ice-type moves.';
+		} else if(ability == 'Regenerator'){
+			var desc = 'Heals for 1/3 max HP upon leaving battle.';
+		} else if(ability == 'Rivalry'){
+			var desc = 'Raises Attack if the foe is of the same gender.';
+		} else if(ability == 'Rock Head'){
+			var desc = 'Protects the Pokémon from recoil damage.';
+		} else if(ability == 'Rough Skin'){
+			var desc = 'Inflicts damage to the foe on contact.';
+		} else if(ability == 'Run Away'){
+			var desc = 'Enables sure getaway from wild Pokémon.';
+		} else if(ability == 'Sand Force'){
+			var desc = 'Strengthens Rock, Ground, and Steel moves to 1.3× their power during a sandstorm.';
+		} else if(ability == 'Sand Rush'){
+			var desc = 'Doubles Speed during a sandstorm.';
+		} else if(ability == 'Sand Stream'){
+			var desc = 'The Pokémon summons a sandstorm in battle.';
+		} else if(ability == 'Sand Veil'){
+			var desc = 'Boosts the Pokémon’s evasion in a sandstorm.';
+		} else if(ability == 'Sap Sipper'){
+			var desc = 'Absorbs Grass moves, raising Attack one stage.';
+		} else if(ability == 'Scrappy'){
+			var desc = 'Enables moves to hit Ghost-type foes.';
+		} else if(ability == 'Serene Grace'){
+			var desc = 'Boosts the likelihood of added effects appearing.';
+		} else if(ability == 'Shadow Tag'){
+			var desc = 'Prevents the foe from escaping.';
+		} else if(ability == 'Shed Skin'){
+			var desc = 'The Pokémon may heal its own status problems.';
+		} else if(ability == 'Sheer Force'){
+			var desc = 'Strengthens moves with extra effects to 1.3× their power, but prevents their extra effects.';
+		} else if(ability == 'Shell Armor'){
+			var desc = 'The Pokémon is protected against critical hits.';
+		} else if(ability == 'Shield Dust'){
+			var desc = 'Blocks the added effects of attacks taken.';
+		} else if(ability == 'Simple'){
+			var desc = 'The Pokémon is prone to wild stat changes.';
+		} else if(ability == 'Skill Link'){
+			var desc = 'Increases the frequency of multi-strike moves.';
+		} else if(ability == 'Slow Start'){
+			var desc = 'Temporarily halves Attack and Speed.';
+		} else if(ability == 'Sniper'){
+			var desc = 'Powers up moves if they become critical hits.';
+		} else if(ability == 'Snow Cloak'){
+			var desc = 'Raises evasion in a hailstorm.';
+		} else if(ability == 'Snow Warning'){
+			var desc = 'The Pokémon summons a hailstorm in battle.';
+		} else if(ability == 'Solar Power'){
+			var desc = 'Boosts Sp. Atk, but lowers HP in sunshine.';
+		} else if(ability == 'Solid Rock'){
+			var desc = 'Powers down supereffective moves.';
+		} else if(ability == 'Soundproof'){
+			var desc = 'Gives full immunity to all sound-based moves.';
+		} else if(ability == 'Speed Boost'){
+			var desc = 'The Pokémon’s Speed stat is gradually boosted.';
+		} else if(ability == 'Stall'){
+			var desc = 'The Pokémon moves after even slower foes.';
+		} else if(ability == 'Stance Change'){
+			var desc = 'The Pokémon changes form depending on how it battles.';
+		} else if(ability == 'Static'){
+			var desc = 'Contact with the Pokémon may cause paralysis.';
+		} else if(ability == 'Steadfast'){
+			var desc = 'Raises Speed each time the Pokémon flinches.';
+		} else if(ability == 'Stench'){
+			var desc = 'The stench may cause the target to flinch.';
+		} else if(ability == 'Sticky Hold'){
+			var desc = 'Protects the Pokémon from item theft.';
+		} else if(ability == 'Storm Drain'){
+			var desc = 'The Pokémon draws in all Water-type moves.';
+		} else if(ability == 'Strong Jaw'){
+			var desc = 'The Pokémon\'s strong jaw gives it tremendous biting power.';
+		} else if(ability == 'Sturdy'){
+			var desc = 'The Pokémon is protected against 1-hit KO attacks.';
+		} else if(ability == 'Suction Cups'){
+			var desc = 'Negates moves that force switching out.';
+		} else if(ability == 'Super Luck'){
+			var desc = 'Heightens the critical-hit ratios of moves.';
+		} else if(ability == 'Swarm'){
+			var desc = 'Powers up Bug-type moves in a pinch.';
+		} else if(ability == 'Sweet Veil'){
+			var desc = 'Prevents itself and its allies from falling asleep.';
+		} else if(ability == 'Swift Swim'){
+			var desc = 'Boosts the Pokémon’s Speed in rain.';
+		} else if(ability == 'Symbiosis'){
+			var desc = 'The Pokémon can pass an item to an ally.';
+		} else if(ability == 'Synchronize'){
+			var desc = 'Passes on a burn, poison, or paralysis to the foe.';
+		} else if(ability == 'Tangled Feet'){
+			var desc = 'Raises evasion if the Pokémon is confused.';
+		} else if(ability == 'Technician'){
+			var desc = 'Powers up the Pokémon’s weaker moves.';
+		} else if(ability == 'Telepathy'){
+			var desc = 'Protects against damaging moves from friendly Pokémon.';
+		} else if(ability == 'Teravolt'){
+			var desc = 'Moves can be used regardless of Abilities.';
+		} else if(ability == 'Thick Fat'){
+			var desc = 'Raises resistance to Fire- and Ice-type moves.';
+		} else if(ability == 'Tinted Lens'){
+			var desc = 'Powers up “not very effective” moves.';
+		} else if(ability == 'Torrent'){
+			var desc = 'Powers up Water-type moves in a pinch.';
+		} else if(ability == 'Tough Claws'){
+			var desc = 'Powers up moves that make direct contact.';
+		} else if(ability == 'Toxic Boost'){
+			var desc = 'Increases Attack to 1.5× when poisoned.';
+		} else if(ability == 'Trace'){
+			var desc = 'The Pokémon copies a foe\'s Ability.';
+		} else if(ability == 'Truant'){
+			var desc = 'The Pokémon can\'t attack on consecutive turns.';
+		} else if(ability == 'Turboblaze'){
+			var desc = 'Moves can be used regardless of Abilities.';
+		} else if(ability == 'Unaware'){
+			var desc = 'Ignores any change in stats by the foe.';
+		} else if(ability == 'Unburden'){
+			var desc = 'Raises Speed if a held item is used.';
+		} else if(ability == 'Unnerve'){
+			var desc = 'Prevents opposing Pokémon from eating held Berries.';
+		} else if(ability == 'Victory Star'){
+			var desc = 'Raises moves\' accuracy to 1.1x for friendly Pokémon.';
+		} else if(ability == 'Vital Spirit'){
+			var desc = 'Prevents the Pokémon from falling asleep.';
+		} else if(ability == 'Volt Absorb'){
+			var desc = 'Restores HP if hit by an Electric-type move.';
+		} else if(ability == 'Water Absorb'){
+			var desc = 'Restores HP if hit by a Water-type move.';
+		} else if(ability == 'Water Veil'){
+			var desc = 'Prevents the Pokémon from getting a burn.';
+		} else if(ability == 'Weak Armor'){
+			var desc = 'Raises Speed and lowers Defense by one stage each upon being hit by any move.';
+		} else if(ability == 'White Smoke'){
+			var desc = 'Prevents the Pokémon’s stats from being lowered.';
+		} else if(ability == 'Wonder Guard'){
+			var desc = 'Only supereffective moves will hit.';
+		} else if(ability == 'Wonder Skin'){
+			var desc = 'Has a 50% chance of protecting against non-damaging moves that inflict major status ailments.';
+		} else if(ability == 'Zen Mode'){
+			var desc = 'Changes the Pokémon\'s shape when HP is halved.';
+		} else{
+			var desc = ability;
+		}
+
+
+		$('.ability-info').append(desc);
+	}
+
+
+	// Add colors for types
 	var popupType1 = $('.popupType1');
 	var n = popupType1.html();
     if(n == 'Normal'){popupType1.css('background-color', '#A8A878');}
@@ -157,5 +586,8 @@ function pokedexPopUp(id){
     else if(m == 'Fairy'){popupType2.css('background-color', '#FF65D5');}
 }
 
+	
+
 </script>
+
 
