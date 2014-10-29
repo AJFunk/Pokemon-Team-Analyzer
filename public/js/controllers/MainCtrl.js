@@ -482,6 +482,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Electric'
             ],
+            HP: 35,
+            Atk: 55,
+            Def: 40,
+            SpAtk: 50,
+            SpDef: 50,
+            Spd: 90,
+            Total: 320,
             abilities: [
                 'Static',
                 'Lightning Rod'
@@ -494,6 +501,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Electric'
             ],
+            HP: 60,
+            Atk: 90,
+            Def: 55,
+            SpAtk: 90,
+            SpDef: 80,
+            Spd: 110,
+            Total: 485,
             abilities: [
                 'Static',
                 'Lightning Rod'
@@ -506,6 +520,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Ground'
             ],
+            HP: 50,
+            Atk: 75,
+            Def: 85,
+            SpAtk: 20,
+            SpDef: 30,
+            Spd: 40,
+            Total: 300,
             abilities: [
                 'Sand Veil',
                 'Sand Rush'
@@ -518,6 +539,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Ground'
             ],
+            HP: 75,
+            Atk: 100,
+            Def: 110,
+            SpAtk: 45,
+            SpDef: 55,
+            Spd: 65,
+            Total: 450,
             abilities: [
                 'Sand Veil',
                 'Sand Rush'
@@ -526,10 +554,17 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
         },
         {
             id: 29,
-            name: 'Nidoran F',
+            name: 'Nidoran \u2640',
             types: [
                 'Poison'
             ],
+            HP: 55,
+            Atk: 47,
+            Def: 52,
+            SpAtk: 40,
+            SpDef: 40,
+            Spd: 41,
+            Total: 275,
             abilities: [
                 'Poison Point',
                 'Rivalry',
@@ -543,6 +578,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Poison'
             ],
+            HP: 70,
+            Atk: 62,
+            Def: 67,
+            SpAtk: 55,
+            SpDef: 55,
+            Spd: 56,
+            Total: 365,
             abilities: [
                 'Poison Point',
                 'Rivalry',
@@ -557,6 +599,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Poison',
                 'Ground'
             ],
+            HP: 90,
+            Atk: 92,
+            Def: 87,
+            SpAtk: 75,
+            SpDef: 85,
+            Spd: 76,
+            Total: 505,
             abilities: [
                 'Poison Point',
                 'Rivalry',
@@ -566,10 +615,17 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
         },
         {
             id: 32,
-            name: 'Nidoran M',
+            name: 'Nidoran \u2642',
             types: [
                 'Poison'
             ],
+            HP: 46,
+            Atk: 57,
+            Def: 40,
+            SpAtk: 40,
+            SpDef: 40,
+            Spd: 50,
+            Total: 273,
             abilities: [
                 'Poison Point',
                 'Rivalry',
@@ -583,6 +639,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Poison'
             ],
+            HP: 61,
+            Atk: 72,
+            Def: 57,
+            SpAtk: 55,
+            SpDef: 55,
+            Spd: 65,
+            Total: 365,
             abilities: [
                 'Poison Point',
                 'Rivalry',
@@ -602,6 +665,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Rivalry',
                 'Sheer Force'
             ],
+            HP: 81,
+            Atk: 102,
+            Def: 77,
+            SpAtk: 85,
+            SpDef: 75,
+            Spd: 85,
+            Total: 505,
             image: 'http://cdn.bulbagarden.net/upload/c/c6/034Nidoking.png'
         },
         {
@@ -610,6 +680,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fairy'
             ],
+            HP: 70,
+            Atk: 45,
+            Def: 48,
+            SpAtk: 60,
+            SpDef: 65,
+            Spd: 35,
+            Total: 323,
             abilities: [
                 'Cute Charm',
                 'Magic Guard',
@@ -623,6 +700,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fairy'
             ],
+            HP: 95,
+            Atk: 70,
+            Def: 73,
+            SpAtk: 95,
+            SpDef: 90,
+            Spd: 60,
+            Total: 483,
             abilities: [
                 'Cute Charm',
                 'Magic Guard',
@@ -636,6 +720,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fire'
             ],
+            HP: 38,
+            Atk: 41,
+            Def: 40,
+            SpAtk: 50,
+            SpDef: 65,
+            Spd: 65,
+            Total: 299,
             abilities: [
                 'Flash Fire',
                 'Drought'
@@ -648,6 +739,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fire'
             ],
+            HP: 73,
+            Atk: 76,
+            Def: 75,
+            SpAtk: 81,
+            SpDef: 100,
+            Spd: 100,
+            Total: 505,
             abilities: [
                 'Flash Fire',
                 'Drought'
@@ -666,6 +764,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Competitive',
                 'Friend Guard'
             ],
+            HP: 115,
+            Atk: 45,
+            Def: 20,
+            SpAtk: 45,
+            SpDef: 25,
+            Spd: 20,
+            Total: 270,
             image: 'http://cdn.bulbagarden.net/upload/3/3e/039Jigglypuff.png'
         },
         {
@@ -675,6 +780,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Normal',
                 'Fairy'
             ],
+            HP: 140,
+            Atk: 70,
+            Def: 45,
+            SpAtk: 85,
+            SpDef: 50,
+            Spd: 45,
+            Total: 435,
             abilities: [
                 'Cute Charm',
                 'Competitive',
@@ -689,6 +801,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Poison',
                 'Flying'
             ],
+            HP: 40,
+            Atk: 45,
+            Def: 35,
+            SpAtk: 30,
+            SpDef: 40,
+            Spd: 55,
+            Total: 245,
             abilities: [
                 'Inner Focus',
                 'Infiltrator'
@@ -702,6 +821,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Poison',
                 'Flying'
             ],
+            HP: 75,
+            Atk: 80,
+            Def: 70,
+            SpAtk: 65,
+            SpDef: 75,
+            Spd: 90,
+            Total: 455,
             abilities: [
                 'Inner Focus',
                 'Infiltrator'
@@ -715,6 +841,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Grass',
                 'Poison'
             ],
+            HP: 45,
+            Atk: 50,
+            Def: 55,
+            SpAtk: 75,
+            SpDef: 65,
+            Spd: 30,
+            Total: 320,
             abilities: [
                 'Chlorophyll',
                 'Run Away'
@@ -732,6 +865,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Chlorophyll',
                 'Stench'
             ],
+            HP: 60,
+            Atk: 65,
+            Def: 70,
+            SpAtk: 85,
+            SpDef: 75,
+            Spd: 40,
+            Total: 395,
             image: 'http://cdn.bulbagarden.net/upload/2/2a/044Gloom.png'
         },
         {
@@ -741,6 +881,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Grass',
                 'Poison'
             ],
+            HP: 75,
+            Atk: 80,
+            Def: 85,
+            SpAtk: 110,
+            SpDef: 90,
+            Spd: 50,
+            Total: 490,
             abilities: [
                 'Chlorophyll',
                 'Effect Spore'
@@ -754,6 +901,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Bug',
                 'Grass'
             ],
+            HP: 35,
+            Atk: 70,
+            Def: 55,
+            SpAtk: 45,
+            SpDef: 55,
+            Spd: 25,
+            Total: 285,
             abilities: [
                 'Effect Spore',
                 'Dry Skin',
@@ -768,6 +922,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Bug',
                 'Grass'
             ],
+            HP: 60,
+            Atk: 95,
+            Def: 80,
+            SpAtk: 60,
+            SpDef: 80,
+            Spd: 30,
+            Total: 405,
             abilities: [
                 'Effect Spore',
                 'Dry Skin',
@@ -782,6 +943,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Bug',
                 'Poison'
             ],
+            HP: 60,
+            Atk: 55,
+            Def: 50,
+            SpAtk: 40,
+            SpDef: 55,
+            Spd: 45,
+            Total: 305,
             abilities: [
                 'Compound Eyes',
                 'Tinted Lens',
@@ -796,6 +964,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Bug',
                 'Poison'
             ],
+            HP: 70,
+            Atk: 65,
+            Def: 60,
+            SpAtk: 90,
+            SpDef: 75,
+            Spd: 90,
+            Total: 450,
             abilities: [
                 'Shield Dust',
                 'Tinted Lens',
@@ -809,6 +984,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Ground'
             ],
+            HP: 10,
+            Atk: 55,
+            Def: 25,
+            SpAtk: 35,
+            SpDef: 45,
+            Spd: 95,
+            Total: 265,
             abilities: [
                 'Sand Veil',
                 'Arena Trap',
@@ -822,6 +1004,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Ground'
             ],
+            HP: 35,
+            Atk: 80,
+            Def: 50,
+            SpAtk: 50,
+            SpDef: 70,
+            Spd: 120,
+            Total: 405,
             abilities: [
                 'Sand Veil',
                 'Arena Trap',
@@ -835,6 +1024,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Normal'
             ],
+            HP: 40,
+            Atk: 45,
+            Def: 35,
+            SpAtk: 40,
+            SpDef: 40,
+            Spd: 90,
+            Total: 290,
             abilities: [
                 'Pickup',
                 'Technician',
@@ -853,6 +1049,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Technician',
                 'Unnerve'
             ],
+            HP: 65,
+            Atk: 70,
+            Def: 60,
+            SpAtk: 65,
+            SpDef: 65,
+            Spd: 115,
+            Total: 440,
             image: 'http://cdn.bulbagarden.net/upload/1/13/053Persian.png'
         },
         {
@@ -866,6 +1069,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Cloud Nine',
                 'Swift Swim'
             ],
+            HP: 50,
+            Atk: 52,
+            Def: 48,
+            SpAtk: 65,
+            SpDef: 50,
+            Spd: 55,
+            Total: 320,
             image: 'http://cdn.bulbagarden.net/upload/5/53/054Psyduck.png'
         },
         {
@@ -879,6 +1089,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Cloud Nine',
                 'Swift Swim'
             ],
+            HP: 80,
+            Atk: 82,
+            Def: 78,
+            SpAtk: 95,
+            SpDef: 80,
+            Spd: 85,
+            Total: 500,
             image: 'http://cdn.bulbagarden.net/upload/f/fe/055Golduck.png'
         },
         {
@@ -887,6 +1104,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fighting'
             ],
+            HP: 40,
+            Atk: 80,
+            Def: 35,
+            SpAtk: 35,
+            SpDef: 45,
+            Spd: 70,
+            Total: 305,
             abilities: [
                 'Vital Spirit',
                 'Anger Point',
@@ -900,6 +1124,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fighting'
             ],
+            HP: 65,
+            Atk: 105,
+            Def: 60,
+            SpAtk: 60,
+            SpDef: 70,
+            Spd: 95,
+            Total: 455,
             abilities: [
                 'Vital Spirit',
                 'Anger Point',
@@ -913,6 +1144,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fire'
             ],
+            HP: 55,
+            Atk: 70,
+            Def: 45,
+            SpAtk: 70,
+            SpDef: 50,
+            Spd: 60,
+            Total: 350,
             abilities: [
                 'Intimidate',
                 'Flash Fire',
@@ -931,6 +1169,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Flash Fire',
                 'Justified'
             ],
+            HP: 90,
+            Atk: 110,
+            Def: 80,
+            SpAtk: 100,
+            SpDef: 80,
+            Spd: 95,
+            Total: 555,
             image: 'http://cdn.bulbagarden.net/upload/b/b8/059Arcanine.png'
         },
         {
@@ -944,6 +1189,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Damp',
                 'Swift Swim'
             ],
+            HP: 40,
+            Atk: 50,
+            Def: 40,
+            SpAtk: 40,
+            SpDef: 40,
+            Spd: 90,
+            Total: 300,
             image: 'http://cdn.bulbagarden.net/upload/4/49/060Poliwag.png'
         },
         {
@@ -952,6 +1204,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Water'
             ],
+            HP: 65,
+            Atk: 65,
+            Def: 65,
+            SpAtk: 50,
+            SpDef: 50,
+            Spd: 90,
+            Total: 385,
             abilities: [
                 'Water Absorb',
                 'Damp',
@@ -966,6 +1225,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Water',
                 'Fighting'
             ],
+            HP: 90,
+            Atk: 95,
+            Def: 95,
+            SpAtk: 70,
+            SpDef: 90,
+            Spd: 70,
+            Total: 510,
             abilities: [
                 'Water Absorb',
                 'Damp',
@@ -979,6 +1245,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Psychic'
             ],
+            HP: 25,
+            Atk: 20,
+            Def: 15,
+            SpAtk: 105,
+            SpDef: 55,
+            Spd: 90,
+            Total: 310,
             abilities: [
                 'Synchronize',
                 'Inner Focus',
@@ -992,6 +1265,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Psychic'
             ],
+            HP: 40,
+            Atk: 35,
+            Def: 30,
+            SpAtk: 120,
+            SpDef: 70,
+            Spd: 105,
+            Total: 400,
             abilities: [
                 'Synchronize',
                 'Inner Focus',
@@ -1005,6 +1285,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Psychic'
             ],
+            HP: 55,
+            Atk: 50,
+            Def: 45,
+            SpAtk: 135,
+            SpDef: 95,
+            Spd: 120,
+            Total: 500,
             abilities: [
                 'Synchronize',
                 'Inner Focus',
@@ -1018,6 +1305,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fighting'
             ],
+            HP: 70,
+            Atk: 80,
+            Def: 50,
+            SpAtk: 35,
+            SpDef: 35,
+            Spd: 35,
+            Total: 305,
             abilities: [
                 'Guts',
                 'No Guard',
@@ -1031,6 +1325,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fighting'
             ],
+            HP: 80,
+            Atk: 100,
+            Def: 70,
+            SpAtk: 50,
+            SpDef: 60,
+            Spd: 45,
+            Total: 405,
             abilities: [
                 'Guts',
                 'No Guard',
@@ -1044,6 +1345,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fighting'
             ],
+            HP: 90,
+            Atk: 130,
+            Def: 80,
+            SpAtk: 65,
+            SpDef: 85,
+            Spd: 55,
+            Total: 505,
             abilities: [
                 'Guts',
                 'No Guard',
@@ -1058,6 +1366,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Grass',
                 'Poison'
             ],
+            HP: 50,
+            Atk: 75,
+            Def: 35,
+            SpAtk: 70,
+            SpDef: 30,
+            Spd: 40,
+            Total: 300,
             abilities: [
                 'Chlorophyll',
                 'Gluttony'
@@ -1071,6 +1386,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Grass',
                 'Poison'
             ],
+            HP: 65,
+            Atk: 90,
+            Def: 50,
+            SpAtk: 85,
+            SpDef: 45,
+            Spd: 55,
+            Total: 390,
             abilities: [
                 'Chlorophyll',
                 'Gluttony'
@@ -1084,6 +1406,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Grass',
                 'Poison'
             ],
+            HP: 80,
+            Atk: 105,
+            Def: 65,
+            SpAtk: 100,
+            SpDef: 60,
+            Spd: 70,
+            Total: 480,
             abilities: [
                 'Chlorophyll',
                 'Gluttony'
@@ -1097,6 +1426,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Water',
                 'Poison'
             ],
+            HP: 40,
+            Atk: 40,
+            Def: 35,
+            SpAtk: 50,
+            SpDef: 100,
+            Spd: 70,
+            Total: 335,
             abilities: [
                 'Clear Body',
                 'Liquid Ooze',
@@ -1111,6 +1447,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Water',
                 'Poison'
             ],
+            HP: 80,
+            Atk: 70,
+            Def: 65,
+            SpAtk: 80,
+            SpDef: 120,
+            Spd: 100,
+            Total: 515,
             abilities: [
                 'Clear Body',
                 'Liquid Ooze',
@@ -1125,6 +1468,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Rock',
                 'Ground'
             ],
+            HP: 40,
+            Atk: 80,
+            Def: 100,
+            SpAtk: 30,
+            SpDef: 30,
+            Spd: 20,
+            Total: 300,
             abilities: [
                 'Rock Head',
                 'Sturdy',
@@ -1139,6 +1489,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Rock',
                 'Ground'
             ],
+            HP: 55,
+            Atk: 95,
+            Def: 115,
+            SpAtk: 45,
+            SpDef: 45,
+            Spd: 35,
+            Total: 390,
             abilities: [
                 'Rock Head',
                 'Sturdy',
@@ -1153,6 +1510,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Rock',
                 'Ground'
             ],
+            HP: 80,
+            Atk: 110,
+            Def: 130,
+            SpAtk: 55,
+            SpDef: 65,
+            Spd: 45,
+            Total: 485,
             abilities: [
                 'Rock Head',
                 'Sturdy',
@@ -1166,6 +1530,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fire'
             ],
+            HP: 50,
+            Atk: 85,
+            Def: 55,
+            SpAtk: 65,
+            SpDef: 65,
+            Spd: 90,
+            Total: 410,
             abilities: [
                 'Run Away',
                 'Flash Fire',
@@ -1179,6 +1550,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fire'
             ],
+            HP: 65,
+            Atk: 100,
+            Def: 70,
+            SpAtk: 80,
+            SpDef: 80,
+            Spd: 105,
+            Total: 500,
             abilities: [
                 'Run Away',
                 'Flash Fire',
@@ -1193,6 +1571,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Water',
                 'Psychic'
             ],
+            HP: 90,
+            Atk: 65,
+            Def: 65,
+            SpAtk: 40,
+            SpDef: 40,
+            Spd: 15,
+            Total: 315,
             abilities: [
                 'Oblivious',
                 'Own Tempo',
@@ -1207,6 +1592,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Water',
                 'Psychic'
             ],
+            HP: 95,
+            Atk: 75,
+            Def: 110,
+            SpAtk: 100,
+            SpDef: 80,
+            Spd: 30,
+            Total: 490,
             abilities: [
                 'Oblivious',
                 'Own Tempo',
@@ -1221,6 +1613,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Electric',
                 'Steel'
             ],
+            HP: 25,
+            Atk: 35,
+            Def: 70,
+            SpAtk: 95,
+            SpDef: 55,
+            Spd: 45,
+            Total: 325,
             abilities: [
                 'Magnet Pull',
                 'Sturdy',
@@ -1235,6 +1634,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Electric',
                 'Steel'
             ],
+            HP: 50,
+            Atk: 60,
+            Def: 95,
+            SpAtk: 120,
+            SpDef: 70,
+            Spd: 70,
+            Total: 465,
             abilities: [
                 'Magnet Pull',
                 'Sturdy',
@@ -1249,6 +1655,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Normal',
                 'Flying'
             ],
+            HP: 52,
+            Atk: 65,
+            Def: 55,
+            SpAtk: 58,
+            SpDef: 62,
+            Spd: 60,
+            Total: 352,
             abilities: [
                 'Keen Eye',
                 'Inner Focus',
@@ -1263,6 +1676,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Normal',
                 'Flying'
             ],
+            HP: 35,
+            Atk: 85,
+            Def: 45,
+            SpAtk: 35,
+            SpDef: 35,
+            Spd: 75,
+            Total: 310,
             abilities: [
                 'Run Away',
                 'Early Bird',
@@ -1277,6 +1697,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Normal',
                 'Flying'
             ],
+            HP: 60,
+            Atk: 110,
+            Def: 70,
+            SpAtk: 60,
+            SpDef: 60,
+            Spd: 100,
+            Total: 460,
             abilities: [
                 'Run Away',
                 'Early Bird',
@@ -1290,6 +1717,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Water'
             ],
+            HP: 65,
+            Atk: 45,
+            Def: 55,
+            SpAtk: 45,
+            SpDef: 70,
+            Spd: 45,
+            Total: 325,
             abilities: [
                 'Thick Fat',
                 'Hydration',
@@ -1304,6 +1738,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Water',
                 'Ice'
             ],
+            HP: 90,
+            Atk: 70,
+            Def: 80,
+            SpAtk: 70,
+            SpDef: 95,
+            Spd: 70,
+            Total: 475,
             abilities: [
                 'Water',
                 'Ice',
@@ -1316,6 +1757,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Poison'
             ],
+            HP: 80,
+            Atk: 80,
+            Def: 50,
+            SpAtk: 40,
+            SpDef: 50,
+            Spd: 25,
+            Total: 325,
             abilities: [
                 'Stench',
                 'Sticky Hold',
@@ -1329,6 +1777,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Poison'
             ],
+            HP: 105,
+            Atk: 105,
+            Def: 75,
+            SpAtk: 65,
+            SpDef: 100,
+            Spd: 50,
+            Total: 500,
             abilities: [
                 'Stench',
                 'Sticky Hold',
@@ -1342,6 +1797,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Water'
             ],
+            HP: 30,
+            Atk: 65,
+            Def: 100,
+            SpAtk: 45,
+            SpDef: 25,
+            Spd: 40,
+            Total: 305,
             abilities: [
                 'Shell Armor',
                 'Skill Link',
@@ -1356,6 +1818,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Water',
                 'Ice'
             ],
+            HP: 50,
+            Atk: 95,
+            Def: 180,
+            SpAtk: 85,
+            SpDef: 45,
+            Spd: 70,
+            Total: 525,
             abilities: [
                 'Shell Armor',
                 'Skill Link',
@@ -1370,6 +1839,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Ghost',
                 'Poison'
             ],
+            HP: 30,
+            Atk: 35,
+            Def: 30,
+            SpAtk: 100,
+            SpDef: 35,
+            Spd: 80,
+            Total: 310,
             abilities: [
                 'Levitate'
             ],
@@ -1382,6 +1858,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Ghost',
                 'Poison'
             ],
+            HP: 45,
+            Atk: 50,
+            Def: 45,
+            SpAtk: 115,
+            SpDef: 55,
+            Spd: 95,
+            Total: 405,
             abilities: [
                 'Levitate'
             ],
@@ -1394,6 +1877,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Ghost',
                 'Poison'
             ],
+            HP: 60,
+            Atk: 65,
+            Def: 60,
+            SpAtk: 130,
+            SpDef: 75,
+            Spd: 110,
+            Total: 500,
             abilities: [
                 'Levitate'
             ],
@@ -1406,6 +1896,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Rock',
                 'Ground'
             ],
+            HP: 35,
+            Atk: 45,
+            Def: 160,
+            SpAtk: 30,
+            SpDef: 45,
+            Spd: 70,
+            Total: 385,
             abilities: [
                 'Rock Head',
                 'Sturdy',
@@ -1419,6 +1916,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Psychic'
             ],
+            HP: 60,
+            Atk: 48,
+            Def: 45,
+            SpAtk: 43,
+            SpDef: 90,
+            Spd: 42,
+            Total: 328,
             abilities: [
                 'Insomnia',
                 'Forewarn',
@@ -1432,6 +1936,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Psychic'
             ],
+            HP: 85,
+            Atk: 73,
+            Def: 70,
+            SpAtk: 73,
+            SpDef: 115,
+            Spd: 67,
+            Total: 483,
             abilities: [
                 'Insomnia',
                 'Forewarn',
@@ -1445,6 +1956,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Water'
             ],
+            HP: 30,
+            Atk: 105,
+            Def: 90,
+            SpAtk: 25,
+            SpDef: 25,
+            Spd: 50,
+            Total: 325,
             abilities: [
                 'Hyper Cutter',
                 'Shell Armor',
@@ -1458,6 +1976,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Water'
             ],
+            HP: 55,
+            Atk: 130,
+            Def: 115,
+            SpAtk: 50,
+            SpDef: 50,
+            Spd: 75,
+            Total: 475,
             abilities: [
                 'Hyper Cutter',
                 'Shell Armor',
@@ -1471,6 +1996,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Electric'
             ],
+            HP: 40,
+            Atk: 30,
+            Def: 50,
+            SpAtk: 55,
+            SpDef: 55,
+            Spd: 100,
+            Total: 330,
             abilities: [
                 'Soundproof',
                 'Static',
@@ -1484,6 +2016,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Electric'
             ],
+            HP: 60,
+            Atk: 50,
+            Def: 70,
+            SpAtk: 80,
+            SpDef: 80,
+            Spd: 140,
+            Total: 480,
             abilities: [
                 'Soundproof',
                 'Static',
@@ -1498,6 +2037,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Grass',
                 'Psychic'
             ],
+            HP: 60,
+            Atk: 40,
+            Def: 80,
+            SpAtk: 60,
+            SpDef: 45,
+            Spd: 40,
+            Total: 325,
             abilities: [
                 'Chlorophyll',
                 'Harvest'
@@ -1511,6 +2057,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Grass',
                 'Psychic'
             ],
+            HP: 95,
+            Atk: 95,
+            Def: 85,
+            SpAtk: 125,
+            SpDef: 65,
+            Spd: 55,
+            Total: 520,
             abilities: [
                 'Chlorophyll',
                 'Harvest'
@@ -1523,6 +2076,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Ground'
             ],
+            HP: 50,
+            Atk: 50,
+            Def: 95,
+            SpAtk: 40,
+            SpDef: 50,
+            Spd: 35,
+            Total: 320,
             abilities: [
                 'Rock Head',
                 'Lightning Rod',
@@ -1536,6 +2096,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Ground'
             ],
+            HP: 60,
+            Atk: 80,
+            Def: 110,
+            SpAtk: 50,
+            SpDef: 80,
+            Spd: 45,
+            Total: 425,
             abilities: [
                 'Rock Head',
                 'Lightning Rod',
@@ -1549,6 +2116,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fighting'
             ],
+            HP: 50,
+            Atk: 120,
+            Def: 53,
+            SpAtk: 35,
+            SpDef: 110,
+            Spd: 87,
+            Total: 455,
             abilities: [
                 'Limber',
                 'Reckless',
@@ -1562,6 +2136,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fighting'
             ],
+            HP: 50,
+            Atk: 105,
+            Def: 79,
+            SpAtk: 35,
+            SpDef: 110,
+            Spd: 76,
+            Total: 455,
             abilities: [
                 'Keen Eye',
                 'Iron Fist',
@@ -1575,6 +2156,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Normal'
             ],
+            HP: 90,
+            Atk: 55,
+            Def: 75,
+            SpAtk: 60,
+            SpDef: 75,
+            Spd: 30,
+            Total: 385,
             abilities: [
                 'Own Tempo',
                 'Oblivious',
@@ -1588,6 +2176,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Poison'
             ],
+            HP: 40,
+            Atk: 65,
+            Def: 95,
+            SpAtk: 60,
+            SpDef: 45,
+            Spd: 35,
+            Total: 340,
             abilities: [
                 'Levitate'
             ],
@@ -1599,6 +2194,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Poison'
             ],
+            HP: 65,
+            Atk: 90,
+            Def: 120,
+            SpAtk: 85,
+            SpDef: 70,
+            Spd: 60,
+            Total: 490,
             abilities: [
                 'Levitate'
             ],
@@ -1611,6 +2213,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Ground',
                 'Rock'
             ],
+            HP: 80,
+            Atk: 85,
+            Def: 95,
+            SpAtk: 30,
+            SpDef: 30,
+            Spd: 25,
+            Total: 345,
             abilities: [
                 'Lightning Rod',
                 'Rock Head',
@@ -1625,6 +2234,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Ground',
                 'Rock'
             ],
+            HP: 105,
+            Atk: 130,
+            Def: 120,
+            SpAtk: 45,
+            SpDef: 45,
+            Spd: 40,
+            Total: 485,
             abilities: [
                 'Lightning Rod',
                 'Rock Head',
@@ -1638,6 +2254,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Normal'
             ],
+            HP: 250,
+            Atk: 5,
+            Def: 5,
+            SpAtk: 35,
+            SpDef: 105,
+            Spd: 50,
+            Total: 450,
             abilities: [
                 'Natural Cure',
                 'Serene Grace',
@@ -1651,6 +2274,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Grass'
             ],
+            HP: 65,
+            Atk: 55,
+            Def: 115,
+            SpAtk: 100,
+            SpDef: 40,
+            Spd: 60,
+            Total: 435,
             abilities: [
                 'Chlorophyll',
                 'Leaf Guard',
@@ -1664,6 +2294,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Normal'
             ],
+            HP: 105,
+            Atk: 95,
+            Def: 80,
+            SpAtk: 40,
+            SpDef: 80,
+            Spd: 90,
+            Total: 490,
             abilities: [
                 'Early Bird',
                 'Scrappy',
@@ -1677,6 +2314,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Water'
             ],
+            HP: 30,
+            Atk: 40,
+            Def: 70,
+            SpAtk: 70,
+            SpDef: 25,
+            Spd: 60,
+            Total: 295,
             abilities: [
                 'Swift Swim',
                 'Sniper',
@@ -1690,6 +2334,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Water'
             ],
+            HP: 55,
+            Atk: 65,
+            Def: 95,
+            SpAtk: 95,
+            SpDef: 45,
+            Spd: 85,
+            Total: 440,
             abilities: [
                 'Poison Point',
                 'Sniper',
@@ -1703,6 +2354,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Water'
             ],
+            HP: 45,
+            Atk: 67,
+            Def: 60,
+            SpAtk: 35,
+            SpDef: 50,
+            Spd: 63,
+            Total: 320,
             abilities: [
                 'Swift Swim',
                 'Water Veil',
@@ -1716,6 +2374,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Water'
             ],
+            HP: 80,
+            Atk: 92,
+            Def: 65,
+            SpAtk: 65,
+            SpDef: 80,
+            Spd: 68,
+            Total: 450,
             abilities: [
                 'Swift Swim',
                 'Water Veil',
@@ -1729,6 +2394,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Water'
             ],
+            HP: 30,
+            Atk: 45,
+            Def: 55,
+            SpAtk: 70,
+            SpDef: 55,
+            Spd: 85,
+            Total: 340,
             abilities: [
                 'Illuminate',
                 'Natural Cure',
@@ -1743,6 +2415,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Water',
                 'Psychic'
             ],
+            HP: 60,
+            Atk: 75,
+            Def: 85,
+            SpAtk: 100,
+            SpDef: 85,
+            Spd: 115,
+            Total: 520,
             abilities: [
                 'Illuminate',
                 'Natural Cure',
@@ -1757,6 +2436,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Psychic',
                 'Fairy'
             ],
+            HP: 40,
+            Atk: 45,
+            Def: 65,
+            SpAtk: 100,
+            SpDef: 120,
+            Spd: 90,
+            Total: 460,
             abilities: [
                 'Soundproof',
                 'Filter',
@@ -1771,6 +2457,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Bug',
                 'Flying'
             ],
+            HP: 70,
+            Atk: 110,
+            Def: 80,
+            SpAtk: 55,
+            SpDef: 80,
+            Spd: 105,
+            Total: 500,
             abilities: [
                 'Swarm',
                 'Technician',
@@ -1785,6 +2478,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Ice',
                 'Psychic'
             ],
+            HP: 65,
+            Atk: 50,
+            Def: 35,
+            SpAtk: 115,
+            SpDef: 95,
+            Spd: 95,
+            Total: 455,
             abilities: [
                 'Oblivious',
                 'Forewarn',
@@ -1798,6 +2498,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Electric'
             ],
+            HP: 65,
+            Atk: 83,
+            Def: 57,
+            SpAtk: 95,
+            SpDef: 85,
+            Spd: 105,
+            Total: 490,
             abilities: [
                 'Static',
                 'Vital Spirit'
@@ -1810,6 +2517,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fire'
             ],
+            HP: 65,
+            Atk: 95,
+            Def: 57,
+            SpAtk: 100,
+            SpDef: 85,
+            Spd: 93,
+            Total: 495,
             abilities: [
                 'Flame Body',
                 'Vital Spirit'
@@ -1822,6 +2536,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Bug'
             ],
+            HP: 65,
+            Atk: 155,
+            Def: 120,
+            SpAtk: 65,
+            SpDef: 90,
+            Spd: 105,
+            Total: 600,
             abilities: [
                 'Hyper Cutter',
                 'Mold Breaker',
@@ -1835,6 +2556,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Normal'
             ],
+            HP: 75,
+            Atk: 100,
+            Def: 95,
+            SpAtk: 40,
+            SpDef: 70,
+            Spd: 110,
+            Total: 490,
             abilities: [
                 'Intimidate',
                 'Anger Point',
@@ -1848,6 +2576,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Water'
             ],
+            HP: 20,
+            Atk: 10,
+            Def: 55,
+            SpAtk: 15,
+            SpDef: 20,
+            Spd: 80,
+            Total: 200,
             abilities: [
                 'Swift Swim',
                 'Rattled'
@@ -1861,6 +2596,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Water',
                 'Flying'
             ],
+            HP: 95,
+            Atk: 125,
+            Def: 79,
+            SpAtk: 60,
+            SpDef: 100,
+            Spd: 81,
+            Total: 540,
             abilities: [
                 'Intimidate',
                 'Moxie'
@@ -1874,6 +2616,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Water',
                 'Ice'
             ],
+            HP: 130,
+            Atk: 85,
+            Def: 80,
+            SpAtk: 85,
+            SpDef: 95,
+            Spd: 60,
+            Total: 535,
             abilities: [
                 'Water Absorb',
                 'Shell Armor',
@@ -1883,10 +2632,17 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
         },
         {
             id: 132,
-            name: '',
+            name: 'Ditto',
             types: [
                 'Normal'
             ],
+            HP: 48,
+            Atk: 48,
+            Def: 48,
+            SpAtk: 48,
+            SpDef: 48,
+            Spd: 48,
+            Total: 288,
             abilities: [
                 'Limber',
                 'Imposter'
@@ -1899,6 +2655,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Normal'
             ],
+            HP: 55,
+            Atk: 55,
+            Def: 50,
+            SpAtk: 45,
+            SpDef: 65,
+            Spd: 55,
+            Total: 325,
             abilities: [
                 'Run Away',
                 'Adaptability',
@@ -1912,6 +2675,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Water'
             ],
+            HP: 130,
+            Atk: 65,
+            Def: 60,
+            SpAtk: 110,
+            SpDef: 95,
+            Spd: 65,
+            Total: 525,
             abilities: [
                 'Water Absorb',
                 'Hydration',
@@ -1924,6 +2694,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Electric'
             ],
+            HP: 65,
+            Atk: 65,
+            Def: 60,
+            SpAtk: 110,
+            SpDef: 95,
+            Spd: 130,
+            Total: 525,
             abilities: [
                 'Volt Absorb',
                 'Quick Feet'
@@ -1936,6 +2713,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Fire'
             ],
+            HP: 65,
+            Atk: 130,
+            Def: 60,
+            SpAtk: 95,
+            SpDef: 110,
+            Spd: 65,
+            Total: 525,
             abilities: [
                 'Flash Fire',
                 'Guts'
@@ -1948,6 +2732,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Normal'
             ],
+            HP: 65,
+            Atk: 60,
+            Def: 70,
+            SpAtk: 85,
+            SpDef: 75,
+            Spd: 40,
+            Total: 395,
             abilities: [
                 'Trace',
                 'Download',
@@ -1962,6 +2753,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Rock',
                 'Water'
             ],
+            HP: 35,
+            Atk: 40,
+            Def: 100,
+            SpAtk: 90,
+            SpDef: 55,
+            Spd: 35,
+            Total: 355,
             abilities: [
                 'Swift Swim',
                 'Shell Armor',
@@ -1976,6 +2774,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Rock',
                 'Water'
             ],
+            HP: 70,
+            Atk: 60,
+            Def: 125,
+            SpAtk: 115,
+            SpDef: 70,
+            Spd: 55,
+            Total: 495,
             abilities: [
                 'Swift Swim',
                 'Shell Armor',
@@ -1990,6 +2795,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Rock',
                 'Water'
             ],
+            HP: 30,
+            Atk: 80,
+            Def: 90,
+            SpAtk: 55,
+            SpDef: 45,
+            Spd: 55,
+            Total: 355,
             abilities: [
                 'Swift Swim',
                 'Battle Armor',
@@ -2004,6 +2816,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Rock',
                 'Water'
             ],
+            HP: 60,
+            Atk: 115,
+            Def: 105,
+            SpAtk: 65,
+            SpDef: 70,
+            Spd: 80,
+            Total: 495,
             abilities: [
                 'Swift Swim',
                 'Battle Armor',
@@ -2018,6 +2837,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Rock',
                 'Flying'
             ],
+            HP: 80,
+            Atk: 105,
+            Def: 65,
+            SpAtk: 60,
+            SpDef: 75,
+            Spd: 130,
+            Total: 515,
             abilities: [
                 'Rock Head',
                 'Pressure',
@@ -2031,6 +2857,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Normal'
             ],
+            HP: 160,
+            Atk: 110,
+            Def: 65,
+            SpAtk: 65,
+            SpDef: 110,
+            Spd: 30,
+            Total: 540,
             abilities: [
                 'Immunity',
                 'Thick Fat',
@@ -2045,6 +2878,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Ice',
                 'Flying'
             ],
+            HP: 90,
+            Atk: 85,
+            Def: 100,
+            SpAtk: 95,
+            SpDef: 125,
+            Spd: 85,
+            Total: 580,
             abilities: [
                 'Pressure',
                 'Snow Cloak'
@@ -2058,6 +2898,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Electric',
                 'Flying'
             ],
+            HP: 90,
+            Atk: 90,
+            Def: 85,
+            SpAtk: 125,
+            SpDef: 90,
+            Spd: 100,
+            Total: 580,
             abilities: [
                 'Pressure',
                 'Static'
@@ -2071,6 +2918,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Fire',
                 'Flying'
             ],
+            HP: 90,
+            Atk: 100,
+            Def: 90,
+            SpAtk: 125,
+            SpDef: 85,
+            Spd: 90,
+            Total: 580,
             abilities: [
                 'Pressure',
                 'Flame Body'
@@ -2083,6 +2937,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Dragon'
             ],
+            HP: 41,
+            Atk: 64,
+            Def: 45,
+            SpAtk: 50,
+            SpDef: 50,
+            Spd: 50,
+            Total: 300,
             abilities: [
                 'Shed Skin',
                 'Marvel Scale'
@@ -2095,6 +2956,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Dragon'
             ],
+            HP: 61,
+            Atk: 84,
+            Def: 65,
+            SpAtk: 70,
+            SpDef: 70,
+            Spd: 70,
+            Total: 420,
             abilities: [
                 'Shed Skin',
                 'Marvel Scale'
@@ -2108,6 +2976,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
                 'Dragon',
                 'Flying'
             ],
+            HP: 91,
+            Atk: 134,
+            Def: 95,
+            SpAtk: 100,
+            SpDef: 100,
+            Spd: 80,
+            Total: 600,
             abilities: [
                 'Inner Focus',
                 'Multiscale'
@@ -2120,6 +2995,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Psychic'
             ],
+            HP: 106,
+            Atk: 110,
+            Def: 90,
+            SpAtk: 154,
+            SpDef: 90,
+            Spd: 130,
+            Total: 680,
             abilities: [
                 'Pressure',
                 'Unnerve'
@@ -2132,6 +3014,13 @@ angular.module('MainCtrl', []).controller('MainController', function($scope) {
             types: [
                 'Psychic'
             ],
+            HP: 100,
+            Atk: 100,
+            Def: 100,
+            SpAtk: 100,
+            SpDef: 100,
+            Spd: 100,
+            Total: 600,
             abilities: [
                 'Synchronize'
             ],
